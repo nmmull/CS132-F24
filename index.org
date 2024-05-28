@@ -1,6 +1,6 @@
 #+title: CAS CS 132
 #+subtitle: Geometric Algorithms
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../globalStyle.css" />
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../../globalStyle.css" />
 #+OPTIONS: html-style:nil H:2 toc:1 num:nil
 THIS IS NOT A CORRECT DESCRIPTION.
 
