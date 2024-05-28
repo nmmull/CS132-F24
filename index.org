@@ -1,7 +1,8 @@
-#+title: CAS CS 132
-#+subtitle: Geometric Algorithms
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../globalStyle.css" />
-#+OPTIONS: html-style:nil H:2 toc:1 num:nil
+#+title: CAS CS 400
+#+subtitle: Type Theory and Mechanized Reasoning@@html:<br>@@
+#+subtitle: Boston University@@html:<br>@@
+#+subtitle: Spring 2024
+#+options: H:2
 This course is an introduction to basic concepts in type theory and
 mechanized proof as they relate to programming languages, formal
 verification, mathematics, and philosophy. We will only be able to
