@@ -1,0 +1,12 @@
+.*
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.tex
+*.sty
+*.~
+*.org
+Makefile
+
+Private
