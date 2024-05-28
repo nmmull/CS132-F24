@@ -1,19 +1,19 @@
 # based on Makefile for the OCaml package Streaming
 
-.PHONY: check-uncommitted
-check-uncommitted:
+.PHONY: check
+check:
 	git diff-index --quiet HEAD -- || (echo "There are uncommitted changes."; exit 1)
-	if [[ $(git ls-files . --exclude-standard --others) ]]; then \
+	if git ls-files . --exclude-standard --others --error-unmatch; then \
 		echo "There are untracked files."; \
 		exit 1; \
+	else \
+		echo "Ignore the \"error: pathspec '.'...\""; \
+		exit 0; \
 	fi
 
-.PHONY: build
-build:
-	rsync -av --exclude-from='.exclude' . ./.build --delete
-
 .PHONY: publish
-publish: build check-uncommitted build
+publish: check
+	rsync -av --exclude-from='.exclude' . ./.build --delete
 	git checkout main
 	rm -r *
 	cp -r .build/* .
