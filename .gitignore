@@ -1,15 +1,2 @@
-*~
+.DS_Store
 .build
-*.aux
-*.fdb_latexmk
-*.fls
-*.log
-*.out
-*.agdai
-*.toc
-*.DS_Store
-*.html
-main.pdf
-ltximg
-Roster
-MAlonzo

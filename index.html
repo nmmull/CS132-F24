@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-05-22 Wed 16:10 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CAS CS 132</title>
+<meta name="author" content="Nathan  Mull" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="../globalStyle.css" />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">CAS CS 132
+<br />
+<span class="subtitle">Geometric Algorithms</span>
+</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org84d082b">Links</a></li>
+<li><a href="#org7ef7d47">Schedule</a></li>
+<li><a href="#org7be8b2b">Topics</a></li>
+</ul>
+</div>
+</div>
+<p>
+This course is an introduction to basic concepts in type theory and
+mechanized proof as they relate to programming languages, formal
+verification, mathematics, and philosophy. We will only be able to
+cover a (biased) selection of rudiments, but the goal is to provide
+students (you) with the tools to:
+</p>
+<ul class="org-ul">
+<li>construct formal proofs and typing derivations for a variety of
+logics and type theories which undergird systems used for large-scale
+verification tasks;</li>
+<li>prove meta-theoretic properties of type theories (like normalization
+and soundness) which are core to their utility;</li>
+<li>implement fundamental algorithms for type theories like
+type-checking and type-inference;</li>
+<li>formalize non-trivial mathematical theorems and properties of
+programs using Agda;</li>
+<li>prepare for graduate-level courses in formal methods and programming
+languages;</li>
+<li>think critically about the fundamental question: <i>what is a proof?</i>
+Does a proof need to be human readable? Does it need to be human
+<i>understandable</i>? Does it need to be constructive? (What <i>is</i> constructivity?)</li>
+</ul>
+
+<p>
+<b>Prerequisites:</b> CS131, CS330, CS320 (CS332 is recommended but not required)
+</p>
+<div id="outline-container-org84d082b" class="outline-2">
+<h2 id="org84d082b">Links</h2>
+<div class="outline-text-2" id="text-org84d082b">
+<ul class="org-ul">
+<li><a href="Notes/syllabus.pdf">Syllabus</a></li>
+<li><a href="https://www.gradescope.com/courses/700611">Gradescope</a></li>
+<li><a href="https://github.com/nmmull/CS491-S24">Course Repository</a></li>
+<li><a href="https://github.com/nmmull/CS400-Lib">Course Agda Library (CS400-Lib)</a></li>
+<li><a href="#org7ef7d47">Schedule</a></li>
+<li>Resources:
+<ul class="org-ul">
+<li><a href="Notes/course-notes.pdf">Type Theory and Mechanized Reasoning (TTMR)</a></li>
+<li><a href="https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf">Programming and Proving in Agda (PPA)</a></li>
+<li><a href="https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/">Type Theory and Functional Programming (TTFF)</a></li>
+<li><a href="https://avigad.github.io/lamr/#">Logic and Mechanized Reasoning (LAMR)</a></li>
+<li><a href="https://wiki.portal.chalmers.se/agda/pmwiki.php">The Agda Wiki</a></li>
+<li><a href="https://pysathq.github.io">PySAT</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7ef7d47" class="outline-2">
+<h2 id="org7ef7d47">Schedule</h2>
+<div class="outline-text-2" id="text-org7ef7d47">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Date</th>
+<th scope="col" class="org-left">Topic</th>
+<th scope="col" class="org-left">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">01-22</td>
+<td class="org-left"><a href="#course-intro">What is this course?</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">01-24</td>
+<td class="org-left"><a href="#ind-rec">Induction and Recursion</a></td>
+<td class="org-left">HW00 out</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">01-29</td>
+<td class="org-left"><a href="#agda-i">Agda I: An Introduction</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">02-01</td>
+<td class="org-left"><a href="#agda-ii">Agda II: Dependent Types</a></td>
+<td class="org-left">HW01 out</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">02-05</td>
+<td class="org-left"><a href="#prop-logic">Propositional Logic I: An Introduction</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">02-07</td>
+<td class="org-left"><a href="#prop-logic-ii">Propositional Logic II: Meta-Theory</a></td>
+<td class="org-left">HW01 due, HW02 out</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">02-12</td>
+<td class="org-left"><a href="#sat-i">SAT-Solvers I: An Introduction</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">02-14</td>
+<td class="org-left"><a href="#sat-ii">SAT-Solvers II: In Practice</a></td>
+<td class="org-left">HW02 due, HW03 out</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">02-19</td>
+<td class="org-left">NO CLASS</td>
+<td class="org-left">Presidents’ Day</td>
+</tr>
+
+<tr>
+<td class="org-right">02-21</td>
+<td class="org-left"><a href="#prop-proof">Propositional Proofs</a></td>
+<td class="org-left">HW03 due, HW04 out</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">02-26</td>
+<td class="org-left"><a href="#lambda-i">The Lambda Calculus I: An Introduction</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">02-28</td>
+<td class="org-left"><a href="#lambda-ii">The Lambda Calculus II: Meta-Theory</a></td>
+<td class="org-left">HW04 due, HW05 out</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">03-04</td>
+<td class="org-left"><a href="#simple-types-i">Simple Types I: An Introduction</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">03-06</td>
+<td class="org-left"><a href="#simple-types-ii">Simple Types II: The Curry-Howard Isomorphism</a></td>
+<td class="org-left">HW05 due, proposal out</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">SPRING RECESS</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">03-18</td>
+<td class="org-left"><a href="#agda-iii">Agda III: The Proof Assistant</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">03-20</td>
+<td class="org-left"><a href="#agda-iv">Agda IV: Equational Reasoning</a></td>
+<td class="org-left">proposal due, HW07 out</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">03-25</td>
+<td class="org-left"><a href="#case-study-i">Case Study I: STLC in Agda</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">03-27</td>
+<td class="org-left"><a href="#case-study-ii">Case Study II: Verified Sorting</a></td>
+<td class="org-left">HW07 due, HW08 out</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">04-01</td>
+<td class="org-left"><a href="#int-logic-i">Intuitionistic Logic I: An introduction</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">04-03</td>
+<td class="org-left"><a href="#int-logic-ii">Intuitionistic Logic II: Kripke Semantics</a></td>
+<td class="org-left">HW08 due, HW09 out</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">04-08</td>
+<td class="org-left"><a href="#poly-i">Polymorphism I: In Introduction</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">04-10</td>
+<td class="org-left"><a href="#poly-ii">Polymorphism II: Logic in System F</a></td>
+<td class="org-left">HW09 due, HW10 out</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">04-15</td>
+<td class="org-left">NO CLASS</td>
+<td class="org-left">Patriots’ Day</td>
+</tr>
+
+<tr>
+<td class="org-right">04-17</td>
+<td class="org-left"><a href="#dtt-i">Dependent type theory I: An introduction</a></td>
+<td class="org-left">HW10 due</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">04-22</td>
+<td class="org-left"><a href="https://www.bu.edu/cphs/colloquium/mathematics-with-a-human-face/">Mathematics with a Human Face</a> (NO CLASS)</td>
+<td class="org-left">Attend for Ex. Credit</td>
+</tr>
+
+<tr>
+<td class="org-right">04-24</td>
+<td class="org-left"><a href="#dtt-ii">Dependent type theory II: Meta-Theory</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">04-29</td>
+<td class="org-left"><a href="#paradox">Advanced: Type-theoretic paradoxes</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">05-01</td>
+<td class="org-left">Final Project Presentations</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org7be8b2b" class="outline-2">
+<h2 id="org7be8b2b">Topics</h2>
+<div class="outline-text-2" id="text-org7be8b2b">
+</div>
+<div id="outline-container-course-intro" class="outline-3">
+<h3 id="course-intro">What is this course?</h3>
+<div class="outline-text-3" id="text-course-intro">
+</div>
+<ul class="org-ul">
+<li><a id="org56d5668"></a>Summary:<br />
+<div class="outline-text-4" id="text-org56d5668">
+<ul class="org-ul">
+<li>give a rough outline of the topics of the course</li>
+<li>discuss the role of mechanized reasoning in computer science and
+mathematics</li>
+<li>look briefly at the Curry-Howard isomorphism</li>
+</ul>
+</div>
+</li>
+<li><a id="org50c98ae"></a>Reading:<br />
+<ul class="org-ul">
+<li><a id="orgf451b01"></a><a href="https://www.quantamagazine.org/the-deep-link-equating-math-proofs-and-computer-programs-20231011/">The Deep Link Equating Math Proofs and Computer Programs (Quanta)</a><br /></li>
+<li><a id="orgaf04897"></a><a href="https://www.nature.com/articles/d41586-021-01627-2">Mathematicians welcome computer-assisted proof in ‘grand unification’ theory (Nature)</a><br /></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-ind-rec" class="outline-3">
+<h3 id="ind-rec">Induction and Recursion</h3>
+<div class="outline-text-3" id="text-ind-rec">
+</div>
+<ul class="org-ul">
+<li><a id="org3218c98"></a>Summary:<br />
+<div class="outline-text-4" id="text-org3218c98">
+<ul class="org-ul">
+<li>review induction over natural numbers and extend this to induction
+over inductively-defined sets</li>
+<li>think about what "kind of thing" induction is, and how that will
+affect our ability to formalize it</li>
+<li>discuss the connection between induction and recursion, with any eye
+towards how these will relate in Lean</li>
+</ul>
+</div>
+</li>
+<li><a id="org0c638c5"></a>Reading:<br />
+<ul class="org-ul">
+<li><a id="orge6ef77c"></a>Required:<br />
+<ul class="org-ul">
+<li><a id="orgb177d51"></a><a href="Notes/course-notes.pdf">TTMR 2: Induction and Recursion</a><br /></li>
+<li><a id="org87d40ea"></a><a href="https://avigad.github.io/lamr/mathematical_background.html">LAMR 2: Mathematical Background</a><br /></li>
+</ul>
+</li>
+<li><a id="org265c1ec"></a>Supplementary (Advanced):<br />
+<ul class="org-ul">
+<li><a id="org4008199"></a><a href="https://yforster.github.io/files/talk-chocola-synthetic-computability.pdf">Synthetic Computability (Yannick Forster)</a><br /></li>
+<li><a id="org09d8f42"></a><a href="https://mathweb.ucsd.edu/~sbuss/ResearchWeb/BAthesis/Buss_Thesis_OCR.pdf">Bounded Arithmetic (Sam Buss)</a><br /></li>
+<li><a id="org1a433e5"></a><a href="https://en.wikipedia.org/wiki/Transfinite_induction">Transfinite Induction (Wikipedia)</a><br /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-agda-i" class="outline-3">
+<h3 id="agda-i">Agda I: An Introduction</h3>
+<div class="outline-text-3" id="text-agda-i">
+<ul class="org-ul">
+<li>Summary:
+<ul class="org-ul">
+<li>examine at Agda as a function programming language, especially as
+compared to OCaml (the language of CAS CS 320)</li>
+<li>start looking at dependent types and what we can do with them</li>
+</ul></li>
+<li>Reading:
+<ul class="org-ul">
+<li><a href="https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf">PPA 1: An introduction to Agda</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-agda-ii" class="outline-3">
+<h3 id="agda-ii">Agda II: Dependent Types</h3>
+<div class="outline-text-3" id="text-agda-ii">
+</div>
+<ul class="org-ul">
+<li><a id="orgfc529d6"></a>Summary:<br />
+<div class="outline-text-4" id="text-orgfc529d6">
+<ul class="org-ul">
+<li>play with dependent types, with the goal of seeing some of their
+strangeness, not necessarily understanding how they work</li>
+<li>start to think about how dependent types can be used to represent
+"properties" and how that might be useful for mechanized reasoning</li>
+</ul>
+</div>
+</li>
+<li><a id="org277c079"></a>Reading:<br />
+<div class="outline-text-4" id="text-org277c079">
+<ul class="org-ul">
+<li><a href="https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf">PPA 2: Dependent Types</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-prop-logic" class="outline-3">
+<h3 id="prop-logic">Propositional Logic I: An Introduction</h3>
+<div class="outline-text-3" id="text-prop-logic">
+</div>
+<ul class="org-ul">
+<li><a id="org6d57037"></a>Summary:<br />
+<div class="outline-text-4" id="text-org6d57037">
+<ul class="org-ul">
+<li>discuss in more detail the standard workflow of Agda</li>
+<li>introduce the syntax and semantics of propositional logic (as well
+as what exactly these terms mean)</li>
+<li>see how we can use Agda as a framework for implementing
+propositional logic</li>
+</ul>
+</div>
+</li>
+<li><a id="orgf4b9730"></a>Reading:<br />
+<ul class="org-ul">
+<li><a id="org9405687"></a>Required:<br />
+<ul class="org-ul">
+<li><a id="orgfceb9ff"></a><a href="Notes/course-notes.pdf">TTMR 4: Classical Propositional Logic</a><br />
+<ul class="org-ul">
+<li><a id="orgace3c5e"></a>4.1: Syntax<br /></li>
+<li><a id="org7a97cdf"></a>4.2: Semantics<br /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="org843d352"></a>Supplementary:<br />
+<ul class="org-ul">
+<li><a id="orgb762b0e"></a><a href="https://nmmull.gitbook.io/cmsc-10500/notes/logic">A Primer on Propositional Logic</a><br /></li>
+<li><a id="org8d263f3"></a><a href="http://intrologic.stanford.edu/chapters/chapter_02.html">Propositional Logic</a><br /></li>
+<li><a id="orgad75096"></a><a href="https://avigad.github.io/lamr/propositional_logic.html#">LAMR 4: Propositional Logic</a><br /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-prop-logic-ii" class="outline-3">
+<h3 id="prop-logic-ii">Propositional Logic II: Meta-Theory</h3>
+<div class="outline-text-3" id="text-prop-logic-ii">
+</div>
+<ul class="org-ul">
+<li><a id="org11c7e7b"></a>Summary:<br />
+<div class="outline-text-4" id="text-org11c7e7b">
+<ul class="org-ul">
+<li>dive deeper into pattern matching in Agda, introducing
+with-abstraction for pattern matching on intermediate computations</li>
+<li>introduce semantic notions in logic, particularly up to the notion of
+logical equivalence</li>
+</ul>
+</div>
+</li>
+<li><a id="org66e9ee9"></a>Reading:<br />
+<ul class="org-ul">
+<li><a id="org7d60856"></a>Required:<br />
+<ul class="org-ul">
+<li><a id="orgdeec139"></a><a href="Notes/course-notes.pdf">TTMR 4: Classical Propositional Logic</a><br />
+<ul class="org-ul">
+<li><a id="org1b54c82"></a>4.3: Meta-Theory<br /></li>
+<li><a id="org69c0b0f"></a>4.4: Functional Completeness<br /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a id="orge031380"></a>Supplementary:<br />
+<ul class="org-ul">
+<li><a id="orgf75c086"></a><a href="https://avigad.github.io/lamr/propositional_logic.html#">LAMR 4: Propositional Logic</a><br /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-sat-i" class="outline-3">
+<h3 id="sat-i">SAT-Solvers I: An Introduction</h3>
+<div class="outline-text-3" id="text-sat-i">
+</div>
+<ul class="org-ul">
+<li><a id="orged711ce"></a>Summary:<br />
+<div class="outline-text-4" id="text-orged711ce">
+<ul class="org-ul">
+<li>finish discussing semantics notions in propositional logic</li>
+<li>talk about functional completeness and normal forms</li>
+<li>introduce SAT solvers and the DPLL procedure</li>
+</ul>
+</div>
+</li>
+<li><a id="orgac3a190"></a>Reading:<br />
+<ul class="org-ul">
+<li><a id="org454b5b0"></a>Required:<br />
+<div class="outline-text-5" id="text-org454b5b0">
+<ul class="org-ul">
+<li><a href="Notes/course-notes.pdf">TTMR 4: Classical Propositional Logic</a>
+<ul class="org-ul">
+<li>4.5: Conjunctive Normal Form</li>
+</ul></li>
+<li><a href="Notes/course-notes.pdf">TTMR 5: SAT Solvers</a>
+<ul class="org-ul">
+<li>5.1: Restriction</li>
+<li>5.2: DPLL</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc174b3c"></a>Supplementary:<br />
+<div class="outline-text-5" id="text-orgc174b3c">
+<ul class="org-ul">
+<li><a href="https://avigad.github.io/lamr/decision_procedures_for_propositional_logic.html#unit-propagation-and-the-pure-literal-rule">LAMR 6.2: Unit Propagation and the Pure Literal Rule</a></li>
+<li><a href="https://avigad.github.io/lamr/decision_procedures_for_propositional_logic.html#dpll">LAMR 6.3: DPLL</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-sat-ii" class="outline-3">
+<h3 id="sat-ii">SAT-Solvers II: In Practice</h3>
+<div class="outline-text-3" id="text-sat-ii">
+</div>
+<ul class="org-ul">
+<li><a id="orgab7a3f0"></a>Summary:<br />
+<div class="outline-text-4" id="text-orgab7a3f0">
+<ul class="org-ul">
+<li>look at a couple encodings of propositions as CNF formulas</li>
+<li>look at an example application of SAT-solvers</li>
+</ul>
+</div>
+</li>
+<li><a id="orgbcd8a70"></a>Reading:<br />
+<ul class="org-ul">
+<li><a id="org5127326"></a>Required:<br />
+<div class="outline-text-5" id="text-org5127326">
+<ul class="org-ul">
+<li><a href="Notes/course-notes.pdf">TTMR 5: SAT Solvers</a>
+<ul class="org-ul">
+<li>5.3 CNF Encodings</li>
+<li>5.4 Example: Sudoku</li>
+</ul></li>
+</ul>
+</div>
+</li>
+<li><a id="org063c123"></a>Supplementary:<br />
+<div class="outline-text-5" id="text-org063c123">
+<ul class="org-ul">
+<li><a href="https://avigad.github.io/lamr/using_sat_solvers.html#">LAMR 7: Using SAT Solvers</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-prop-proof" class="outline-3">
+<h3 id="prop-proof">Propositional Proofs</h3>
+<div class="outline-text-3" id="text-prop-proof">
+</div>
+<ul class="org-ul">
+<li><a id="org94dfebb"></a>Summary:<br />
+<div class="outline-text-4" id="text-org94dfebb">
+<ul class="org-ul">
+<li>define the notion of a proof system and a Gentzen-style sequent proof</li>
+<li>introduce resolution as an example of a proof system</li>
+<li>demonstrate the connection between resolution and DPLL.</li>
+</ul>
+</div>
+</li>
+<li><a id="org03a72b8"></a>Reading:<br />
+<div class="outline-text-4" id="text-org03a72b8">
+<ul class="org-ul">
+<li><a href="https://avigad.github.io/lamr/deduction_for_propositional_logic.html#resolution">LAMR 8.2: Resolution</a></li>
+<li><a href="https://avigad.github.io/lamr/deduction_for_propositional_logic.html#resolution-and-dpll">LAMR 8.4: Resolution and DPLL</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-lambda-i" class="outline-3">
+<h3 id="lambda-i">The Lambda Calculus I: An Introduction</h3>
+<div class="outline-text-3" id="text-lambda-i">
+</div>
+<ul class="org-ul">
+<li><a id="orga692af0"></a>Summary:<br />
+<div class="outline-text-4" id="text-orga692af0">
+<ul class="org-ul">
+<li>introduce the syntax and semantics of the lambda calculus.</li>
+</ul>
+</div>
+</li>
+<li><a id="org3e08f0a"></a>Reading:<br />
+<div class="outline-text-4" id="text-org3e08f0a">
+<ul class="org-ul">
+<li><a href="https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/">TTFP 2: Functional Programming and Lambda-Calculi</a>
+<ul class="org-ul">
+<li>2.2: The untyped lambda-calculus</li>
+<li>2.3: Evaluation</li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-lambda-ii" class="outline-3">
+<h3 id="lambda-ii">The Lambda Calculus II: Meta-Theory</h3>
+<div class="outline-text-3" id="text-lambda-ii">
+</div>
+<ul class="org-ul">
+<li><a id="orgcc09031"></a>Summary:<br />
+<div class="outline-text-4" id="text-orgcc09031">
+<ul class="org-ul">
+<li>introduce semantic notions of the lambda calculus, including
+normalization and evaluation strategies.</li>
+<li>look at how to encode data.</li>
+<li>talk breifly about De Bruijn indices and alpha equivalence.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb41c67f"></a>Reading:<br />
+<div class="outline-text-4" id="text-orgb41c67f">
+<ul class="org-ul">
+<li><a href="https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/">TTFP 2: Functional Programming and Lambda-Calculi</a>
+<ul class="org-ul">
+<li>2.4: Convertibility</li>
+<li>2.5: Expressiveness</li>
+</ul></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-simple-types-i" class="outline-3">
+<h3 id="simple-types-i">Simple Types I: An Introduction</h3>
+<div class="outline-text-3" id="text-simple-types-i">
+</div>
+<ul class="org-ul">
+<li><a id="org90c747c"></a>Summary:<br />
+<div class="outline-text-4" id="text-org90c747c">
+<ul class="org-ul">
+<li>introduce the simply typed lambda calculus (STLC)</li>
+<li>give an outline of the proof that STLC is strongly normalizing</li>
+</ul>
+</div>
+</li>
+<li><a id="org55abfc1"></a>Reading:<br />
+<div class="outline-text-4" id="text-org55abfc1">
+<ul class="org-ul">
+<li><a href="https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/">TTFP 2: Function Programming and Lambda-Calculi</a>
+<ul class="org-ul">
+<li>2.6: Typed lambda-calculus</li>
+<li>2.7: Strong normalization</li>
+</ul></li>
+<li><a href="https://people.mpi-sws.org/~dg/teaching/pt2012/sn.pdf">Strong Normalization for Simply Typed Lambda Calculus (Notes)</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-simple-types-ii" class="outline-3">
+<h3 id="simple-types-ii">Simple Types II: The Curry-Howard Isomorphism</h3>
+<div class="outline-text-3" id="text-simple-types-ii">
+</div>
+<ul class="org-ul">
+<li><a id="org67a45a8"></a>Summary:<br />
+<div class="outline-text-4" id="text-org67a45a8">
+<ul class="org-ul">
+<li>finish the discussion of strong normalization</li>
+<li>discuss data types in STLC</li>
+<li>connect data types to the Curry-Howard isomorphism</li>
+</ul>
+</div>
+</li>
+<li><a id="org66a015a"></a>Reading:<br />
+<div class="outline-text-4" id="text-org66a015a">
+<ul class="org-ul">
+<li><a href="https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/">TTFP 2: Function Programming and Lambda-Calculi</a>
+<ul class="org-ul">
+<li>2.8: Further type constructors: the product</li>
+<li>2.9: Base types: natural numbers</li>
+</ul></li>
+<li><a href="https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf">PPA 3.1: The Curry-Howard correspondence: Propositional logic</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-agda-iii" class="outline-3">
+<h3 id="agda-iii">Agda III: The Proof Assistant</h3>
+<div class="outline-text-3" id="text-agda-iii">
+</div>
+<ul class="org-ul">
+<li><a id="org0752863"></a>Summary:<br />
+<div class="outline-text-4" id="text-org0752863">
+<ul class="org-ul">
+<li>recall the Curry-Howard isomorphism and see how it applies to Agda</li>
+<li>see how to interpret Agda programs as mathematical proofs and
+translate mathematics into Agda</li>
+</ul>
+</div>
+</li>
+<li><a id="orga8a711c"></a>Reading:<br />
+<div class="outline-text-4" id="text-orga8a711c">
+<ul class="org-ul">
+<li><a href="https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf">PPA 3: The Curry-Howard correspondence (whole chapter)</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-agda-iv" class="outline-3">
+<h3 id="agda-iv">Agda IV: Equational Reasoning</h3>
+<div class="outline-text-3" id="text-agda-iv">
+</div>
+<ul class="org-ul">
+<li><a id="org9361180"></a>Summary:<br />
+<div class="outline-text-4" id="text-org9361180">
+<ul class="org-ul">
+<li>discuss how to prove complex equalities in Agda</li>
+<li>see many examples in code</li>
+</ul>
+</div>
+</li>
+<li><a id="orgd1e0b92"></a>Reading:<br />
+<div class="outline-text-4" id="text-orgd1e0b92">
+<ul class="org-ul">
+<li><a href="https://github.com/jespercockx/agda-lecture-notes/blob/master/agda.pdf">PPA 4: Equational reasoning in Agda</a> (note: we use different syntax,
+but the ideas transfer)</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-case-study-i" class="outline-3">
+<h3 id="case-study-i">Case Study I: STLC in Agda</h3>
+<div class="outline-text-3" id="text-case-study-i">
+</div>
+<ul class="org-ul">
+<li><a id="org0fc8630"></a>Summary:<br />
+<div class="outline-text-4" id="text-org0fc8630">
+<ul class="org-ul">
+<li>see how to formalize the simply typed lambda calculus in Agda</li>
+<li>prove several meta-theoretic lemmas, leading to type preservation</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb1fe95e"></a>Reading:<br />
+<div class="outline-text-4" id="text-orgb1fe95e">
+<ul class="org-ul">
+<li>look through the code from lecture</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-case-study-ii" class="outline-3">
+<h3 id="case-study-ii">Case Study II: Verified Sorting</h3>
+<div class="outline-text-3" id="text-case-study-ii">
+</div>
+<ul class="org-ul">
+<li><a id="orgf6e5df0"></a>Summary:<br />
+<div class="outline-text-4" id="text-orgf6e5df0">
+<ul class="org-ul">
+<li>verify that (functional) insertion sort returns an ordered list</li>
+<li>see the connections between how the algorithm is written and how
+properties are proved about it</li>
+</ul>
+</div>
+</li>
+<li><a id="org0bf769d"></a>Reading:<br />
+<div class="outline-text-4" id="text-org0bf769d">
+<ul class="org-ul">
+<li>look through the code from lecture</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-int-logic-i" class="outline-3">
+<h3 id="int-logic-i">Intuitionistic Logic I: An introduction</h3>
+<div class="outline-text-3" id="text-int-logic-i">
+</div>
+<ul class="org-ul">
+<li><a id="orge25f9ad"></a>Summary:<br />
+<div class="outline-text-4" id="text-orge25f9ad">
+<ul class="org-ul">
+<li>introduce a proof system for intuitionistic propositional logic with
+propositional variables (IPL) as the simply typed lambda calculus
+with type variables with type variables (STLC) minus the
+computational content</li>
+<li>introduce a proof system for classical propositional logic (CPL) as
+IPL plus a variant of proof by contradiction</li>
+<li>look at classical principles which are not intuitionistically
+provable</li>
+<li>see what is gained by thinking intuitionistically (e.g., the
+disjunction property)</li>
+</ul>
+</div>
+</li>
+<li><a id="org26a331d"></a>Reading:<br />
+<div class="outline-text-4" id="text-org26a331d">
+<ul class="org-ul">
+<li>please look through the lecture slides</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-int-logic-ii" class="outline-3">
+<h3 id="int-logic-ii">Intuitionistic Logic II: Kripke Semantics</h3>
+<div class="outline-text-3" id="text-int-logic-ii">
+</div>
+<ul class="org-ul">
+<li><a id="orgc5ea402"></a>Summary:<br />
+<div class="outline-text-4" id="text-orgc5ea402">
+<ul class="org-ul">
+<li>recall the notions of soundness and completeness</li>
+<li>note that IPL is not complete with respect to valuations</li>
+<li>present Kripke models as an alternative semantics for which IPL is
+sound and complete</li>
+<li>use Kripke countermodels to prove that some classical principles
+cannot be proved in IPL</li>
+</ul>
+</div>
+</li>
+<li><a id="orgcbccf46"></a>Reading:<br />
+<div class="outline-text-4" id="text-orgcbccf46">
+<ul class="org-ul">
+<li>please look through the lecture slides</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-poly-i" class="outline-3">
+<h3 id="poly-i">Polymorphism I: In Introduction</h3>
+<div class="outline-text-3" id="text-poly-i">
+</div>
+<ul class="org-ul">
+<li><a id="org20cf538"></a>Summary:<br />
+<div class="outline-text-4" id="text-org20cf538">
+<ul class="org-ul">
+<li>look generally the notion of polymorphism</li>
+<li>introduce System F as a typed lambda calculi with polymorphism</li>
+<li>discuss briefly the role of type annotations in type checking and
+type inference</li>
+</ul>
+</div>
+</li>
+<li><a id="org1873c85"></a>Reading:<br />
+<div class="outline-text-4" id="text-org1873c85">
+<ul class="org-ul">
+<li>please look through the lecture slides</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-poly-ii" class="outline-3">
+<h3 id="poly-ii">Polymorphism II: Logic in System F</h3>
+<div class="outline-text-3" id="text-poly-ii">
+</div>
+<ul class="org-ul">
+<li><a id="orge44705c"></a>Summary:<br />
+<div class="outline-text-4" id="text-orge44705c">
+<ul class="org-ul">
+<li>recap System F</li>
+<li>look at how to represent logical connectives in System F</li>
+<li>briefly discuss unification, implicit variables, and the type
+inference problem</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-dtt-i" class="outline-3">
+<h3 id="dtt-i">Dependent type theory I: An introduction</h3>
+<div class="outline-text-3" id="text-dtt-i">
+</div>
+</div>
+<div id="outline-container-dtt-ii" class="outline-3">
+<h3 id="dtt-ii">Dependent type theory II: Meta-Theory</h3>
+<div class="outline-text-3" id="text-dtt-ii">
+</div>
+</div>
+<div id="outline-container-paradox" class="outline-3">
+<h3 id="paradox">Advanced: Type-theoretic paradoxes</h3>
+<div class="outline-text-3" id="text-paradox">
+</div>
+</div>
+<div id="outline-container-real-world" class="outline-3">
+<h3 id="real-world"><span class="todo TODO">TODO</span> Advanced: Real world mechanized proving</h3>
+<div class="outline-text-3" id="text-real-world">
+</div>
+</div>
+<div id="outline-container-curry-howard" class="outline-3">
+<h3 id="curry-howard"><span class="todo TODO">TODO</span> The Curry-Howard isomorphism</h3>
+<div class="outline-text-3" id="text-curry-howard">
+</div>
+</div>
+<div id="outline-container-lambda-cube" class="outline-3">
+<h3 id="lambda-cube"><span class="todo TODO">TODO</span> Advanced: The lambda cube</h3>
+<div class="outline-text-3" id="text-lambda-cube">
+</div>
+</div>
+<div id="outline-container-theories" class="outline-3">
+<h3 id="theories"><span class="todo TODO">TODO</span> Predicate Logic I: Theories and Models</h3>
+<div class="outline-text-3" id="text-theories">
+</div>
+</div>
+<div id="outline-container-smt" class="outline-3">
+<h3 id="smt"><span class="todo TODO">TODO</span> Predicate Logic II: SAT Modulo Theories (SMT)</h3>
+<div class="outline-text-3" id="text-smt">
+</div>
+</div>
+<div id="outline-container-int-prop-logic-i" class="outline-3">
+<h3 id="int-prop-logic-i"><span class="todo TODO">TODO</span> Intuitionistic Propositional Logic</h3>
+<div class="outline-text-3" id="text-int-prop-logic-i">
+</div>
+</div>
+<div id="outline-container-hol" class="outline-3">
+<h3 id="hol"><span class="todo TODO">TODO</span> Quantifiers and higher-order logic</h3>
+<div class="outline-text-3" id="text-hol">
+</div>
+</div>
+<div id="outline-container-extensions" class="outline-3">
+<h3 id="extensions"><span class="todo TODO">TODO</span> Advanced: Extensions of type theory</h3>
+<div class="outline-text-3" id="text-extensions">
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
