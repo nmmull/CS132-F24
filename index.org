@@ -1,78 +1,108 @@
 #+title: CAS CS 132
-#+subtitle: Geometric Algorithms
+#+subtitle: UNDER CONSTRUCTION
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../globalStyle.css" />
 #+OPTIONS: html-style:nil H:2 toc:1 num:nil
+| Title    | Geometric Algorithms |
+| Location | Boston University    |
+| Semester | Fall 2024            |
 This course is an introduction to linear algebra with a bent towards
 applications in computer science. One of its primary goals is to
 prepare students for courses in the CS cirriculum at BU which require
 some degree of linear algebra. It is based on (and depends heavily on
 the material of) the version of the course taught by [[https://www.cs.bu.edu/fac/crovella/][Mark Crovella]].
 
-* Links
-+ Assignments
+* Pages
++ [[file:topics.org][Topics]]
 + Material
++ Information
++ [[https://nmmull.github.io/pages/policies.html][Policies]]
+
+* Links
 + Piazza
 + Gradescope
-+ Registrar
-+ Information
-+ Policies
 + *Programming:*
-  + python
-  + NumPy
-  + SciPy
-  + matplotlib
+  + [[https://www.python.org][Python]]
+  + [[https://numpy.org][NumPy]]
+  + [[https://scipy.org][SciPy]]
+  + [[https://matplotlib.org][Matplotlib]]
 
 * Schedule
-|-------+-------------------------+---------------------|
-|  Date | Topic                   | Notes               |
-|-------+-------------------------+---------------------|
-| 09-03 | [[#linear-eqs]]             |                     |
-| 09-05 | [[#gauss]]                  | HW01 out            |
-|-------+-------------------------+---------------------|
-| 09-10 | [[#numerics]]               |                     |
-| 09-12 | [[#vec-eqs]]                | HW01 due, HW02 out  |
-|-------+-------------------------+---------------------|
-| 09-17 | [[#mat-vec-eqs]]            |                     |
-| 09-19 | [[#linear-ind]]             | HW02 due, HW03 out  |
-|-------+-------------------------+---------------------|
-| 09-24 | [[#linear-trans]]           |                     |
-| 09-26 | [[#mat-linear-trans]]       | HW03 due, HW04 out  |
-|-------+-------------------------+---------------------|
-| 10-01 | [[#numerics-ii]]            |                     |
-| 10-03 | [[#matrix-alg]]             | HW04 due, HW05 out  |
-|-------+-------------------------+---------------------|
-| 10-08 | [[#matrix-inv]]             |                     |
-| 10-10 | [[#inv-mat-thm]]            | HW05 due, HW06 out  |
-|-------+-------------------------+---------------------|
-| 10-15 | NO CLASS                | Substitute Monday   |
-| 10-17 | [[#algebraic-graph-theory]] | HW06 due            |
-|-------+-------------------------+---------------------|
-| 10-22 | MIDTERM                 |                     |
-| 10-24 | [[#markov-chains]]          | HW07 out            |
-|-------+-------------------------+---------------------|
-| 10-29 | [[#matrix-fact]]            |                     |
-| 10-31 | [[#graphics]]               | HW07 due, HW08 out  |
-|-------+-------------------------+---------------------|
-| 11-05 | [[#subspaces]]              |                     |
-| 11-07 | [[#dim-rank]]               | HW08 due, HW09 out  |
-|-------+-------------------------+---------------------|
-| 11-12 | [[#eigenvectors]]           |                     |
-| 11-14 | [[#char-eq]]                | HW09 due, HW10 out  |
-|-------+-------------------------+---------------------|
-| 11-19 | [[#diagonalization]]        |                     |
-| 11-21 | [[#ortho]]                  | HW10 due, HW11 out  |
-|-------+-------------------------+---------------------|
-| 11-26 | [[#pagerank]]               |                     |
-| 11-28 | NO CLASS                | Thanksgiving Recess |
-|-------+-------------------------+---------------------|
-| 12-03 | [[#ortho-proj]]             |                     |
-| 12-05 | [[#least-sqs]]              | HW11 due, HW12 out  |
-|-------+-------------------------+---------------------|
-| 12-10 | [[#linear-models]]          |                     |
-| 12-12 | [[#sym-matrix]]             | HW12 due            |
-|-------+-------------------------+---------------------|
-|   TBD | FINAL EXAM              |                     |
-|-------+-------------------------+---------------------|
+|-------+------------------------------------+---------------------|
+|  Date | Topic                              | Notes               |
+|-------+------------------------------------+---------------------|
+| 09-03 | [[file:topics.org::#linear-eqs][Linear Equations]]                   |                     |
+| 09-05 | [[file:topics.org::#gauss][Gaussian Elimination]]               | HW01 out            |
+| 09-06 | Discussion 01                      |                     |
+|-------+------------------------------------+---------------------|
+| 09-09 | Discussion 01                      |                     |
+| 09-10 | [[file:topics.org::#vec-eqs][Vector Equations]]                   |                     |
+| 09-12 | [[file:topics.html::mat-vec-eqs][Matrix-Vector Equations]]            | HW01 due, HW02 out  |
+| 09-13 | Discussion 02                      |                     |
+|-------+------------------------------------+---------------------|
+| 09-16 | Discussion 02                      |                     |
+| 09-17 | [[file:topics.org::#linear-ind][Linear Independence]]                |                     |
+| 09-19 | [[file:topics.org::#numerics][Numerics and Numpy (Part I)]]        | HW02 due, HW03 out  |
+| 09-20 | Discussion 03                      |                     |
+|-------+------------------------------------+---------------------|
+| 09-23 | Discussion 03                      |                     |
+| 09-24 | [[file:topics.org::#linear-trans][Linear Transformations]]             |                     |
+| 09-26 | [[file:topics.org::#mat-linear-trans][Matrices of Linear Transformations]] | HW03 due, HW04 out  |
+| 09-27 | Discussion 04                      |                     |
+|-------+------------------------------------+---------------------|
+| 09-27 | Discussion 04                      |                     |
+| 10-01 | [[file:topics::#matrix-alg][Matrix Algebra]]                     |                     |
+| 10-03 | [[file:topics.org::#numerics-ii][Numerics and Numpy (Part II)]]       | HW04 due, HW05 out  |
+| 09-27 | Discussion 05                      |                     |
+|-------+------------------------------------+---------------------|
+| 09-27 | Discussion 05                      |                     |
+| 10-08 | [[file:topics.org::#matrix-inv][Matrix Inverse]]                     |                     |
+| 10-10 | [[file:topics.org::#inv-mat-thm][Invertible Matrix Theorem]]          | HW05 due, HW06 out  |
+| 09-27 | Discussion 06                      |                     |
+|-------+------------------------------------+---------------------|
+| 10-14 | NO DISCUSSION                      | ???                 |
+| 10-15 | NO CLASS (Discussion 06)           | Substitute Monday   |
+| 10-17 | [[file:topics.org::#algebraic-graph-theory][Algebraic Graph Theory]]             | HW06 due            |
+| 10-18 | Discussion 07                      |                     |
+|-------+------------------------------------+---------------------|
+| 10-21 | Discussion 07                      |                     |
+| 10-22 | *MIDTERM*                          |                     |
+| 10-24 | [[file:topics.org::#markov-chains][Markov Chains]]                      | HW07 out            |
+| 10-25 | Discussion 08                      |                     |
+|-------+------------------------------------+---------------------|
+| 10-28 | Discussion 08                      |                     |
+| 10-29 | [[file:topics.org::#matrix-fact][Matrix Factorization]]               |                     |
+| 10-31 | [[file:topics.org::#graphics][Computer Graphics]]                  | HW07 due, HW08 out  |
+| 11-01 | Discussion 09                      |                     |
+|-------+------------------------------------+---------------------|
+| 11-04 | Discussion 09                      |                     |
+| 11-05 | [[file:topics.org::#subspaces][Subspaces]]                          |                     |
+| 11-07 | [[file:topics.org::#dim-rank][Dimension and Rank]]                 | HW08 due, HW09 out  |
+| 11-05 | Discussion 10                      |                     |
+|-------+------------------------------------+---------------------|
+| 11-01 | Discussion 10                      |                     |
+| 11-12 | [[file:topics.org::#eigenvectors][Eigenvalues and Eigenvectors]]       |                     |
+| 11-14 | [[file:topics.org::#char-eq][The Characteristic Equation]]        | HW09 due, HW10 out  |
+| 11-15 | Discussion 11                      |                     |
+|-------+------------------------------------+---------------------|
+| 11-18 | Discussion 11                      |                     |
+| 11-19 | [[file:topics.org::#diagonalization][Diagonalization]]                    |                     |
+| 11-21 | [[file:topics.org::#ortho][Orthogonality]]                      | HW10 due, HW11 out  |
+| 11-12 | Discussion 12                      |                     |
+|-------+------------------------------------+---------------------|
+| 11-15 | Discussion 12                      |                     |
+| 11-26 | [[file:topics.org::#pagerank][PageRank]]                           |                     |
+| 11-28 | NO CLASS                           | Thanksgiving Recess |
+|-------+------------------------------------+---------------------|
+| 12-02 | NO DISCUSSION                      |                     |
+| 12-03 | [[file:topics.org::#ortho-proj][Orthogonal Projection]]              |                     |
+| 12-05 | [[file:topics.org::#least-sqs][Least Squares]]                      | HW11 due, HW12 out  |
+| 12-06 | Discussion 13                      |                     |
+|-------+------------------------------------+---------------------|
+| 12-09 | Discussion 13                      |                     |
+| 12-10 | [[file:topics.org::#linear-models][Linear Models]]                      |                     |
+|-------+------------------------------------+---------------------|
+|   TBD | FINAL EXAM                         |                     |
+|-------+------------------------------------+---------------------|
 
 * Course Staff
 + *Instructor:* Nathan Mull
@@ -83,116 +113,4 @@ the material of) the version of the course taught by [[https://www.cs.bu.edu/fac
 + *Course Assistants:*
   + TBD
 
-* Topics
-** Linear Equations
-:PROPERTIES:
-:CUSTOM_ID: linear-eqs
-:END:
-** Gaussian Elimination
-:PROPERTIES:
-:CUSTOM_ID: gauss
-:END:
-** Numerics and NumPy (Part I)
-:PROPERTIES:
-:CUSTOM_ID: numerics
-:END:
-** Vector Equations
-:PROPERTIES:
-:CUSTOM_ID: vec-eqs
-:END:
-** Matrix-Vector Equations
-:PROPERTIES:
-:CUSTOM_ID: mat-vec-eqs
-:END:
-** Linear Independence
-:PROPERTIES:
-:CUSTOM_ID: linear-ind
-:END:
-** Linear Transformations
-:PROPERTIES:
-:CUSTOM_ID: linear-trans
-:END:
-** Matrices of Linear Transformations
-:PROPERTIES:
-:CUSTOM_ID: mat-linear-trans
-:END:
-** Matrix Algebra
-:PROPERTIES:
-:CUSTOM_ID: matrix-alg
-:END:
-** Numerics and NumPy (Part II)
-:PROPERTIES:
-:CUSTOM_ID: numerics-ii
-:END:
-** Matrix Inverse
-:PROPERTIES:
-:CUSTOM_ID: matrix-inv
-:END:
-** Invertible Matrix Theorem
-:PROPERTIES:
-:CUSTOM_ID: inv-mat-thm
-:END:
-** Markov Chains
-:PROPERTIES:
-:CUSTOM_ID: markov-chains
-:END:
-** Matrix Factorization
-:PROPERTIES:
-:CUSTOM_ID: matrix-fact
-:END:
-** Computer Graphics
-:PROPERTIES:
-:CUSTOM_ID: graphics
-:END:
-** Subspaces
-:PROPERTIES:
-:CUSTOM_ID: subspaces
-:END:
-** Dimension and Rank
-:PROPERTIES:
-:CUSTOM_ID: dim-rank
-:END:
-** Eigenvalues and Eigenvectors
-:PROPERTIES:
-:CUSTOM_ID: eigenvectors
-:END:
-** The Characteristic Equation
-:PROPERTIES:
-:CUSTOM_ID: char-eq
-:END:
-** Algebraic Graph Theory
-:PROPERTIES:
-:CUSTOM_ID: algebraic-graph-theory
-:END:
-** Diagonalization
-:PROPERTIES:
-:CUSTOM_ID: diagonalization
-:END:
-** Orthogonality
-:PROPERTIES:
-:CUSTOM_ID: ortho
-:END:
-** PageRank
-:PROPERTIES:
-:CUSTOM_ID: pagerank
-:END:
-** Orthogonal Projection
-:PROPERTIES:
-:CUSTOM_ID: ortho-proj
-:END:
-** Least Squares
-:PROPERTIES:
-:CUSTOM_ID: least-sqs
-:END:
-** Linear Models
-:PROPERTIES:
-:CUSTOM_ID: linear-models
-:END:
-** Symmetric Matrices
-:PROPERTIES:
-:CUSTOM_ID: sym-matrix
-:END:
-** Singular Value Decomposition
-:PROPERTIES:
-:CUSTOM_ID: svd
-:END:
+* Log

@@ -1,0 +1,108 @@
+#+title: Topics
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../globalStyle.css" />
+#+OPTIONS: html-style:nil H:2 toc:1 num:nil tasks:nil
+This page is a list of topics
+* Linear Equations
+:PROPERTIES:
+:CUSTOM_ID: linear-eqs
+:END:
+* Gaussian Elimination
+:PROPERTIES:
+:CUSTOM_ID: gauss
+:END:
+* Vector Equations
+:PROPERTIES:
+:CUSTOM_ID: vec-eqs
+:END:
+* Matrix-Vector Equations
+:PROPERTIES:
+:CUSTOM_ID: mat-vec-eqs
+:END:
+* Linear Independence
+:PROPERTIES:
+:CUSTOM_ID: linear-ind
+:END:
+* Numerics and NumPy (Part I)
+:PROPERTIES:
+:CUSTOM_ID: numerics
+:END:
+* Linear Transformations
+:PROPERTIES:
+:CUSTOM_ID: linear-trans
+:END:
+* Matrices of Linear Transformations
+:PROPERTIES:
+:CUSTOM_ID: mat-linear-trans
+:END:
+* Matrix Algebra
+:PROPERTIES:
+:CUSTOM_ID: matrix-alg
+:END:
+* Numerics and NumPy (Part II)
+:PROPERTIES:
+:CUSTOM_ID: numerics-ii
+:END:
+* Matrix Inverse
+:PROPERTIES:
+:CUSTOM_ID: matrix-inv
+:END:
+* Invertible Matrix Theorem
+:PROPERTIES:
+:CUSTOM_ID: inv-mat-thm
+:END:
+* Algebraic Graph Theory
+:PROPERTIES:
+:CUSTOM_ID: algebraic-graph-theory
+:END:
+* Markov Chains
+:PROPERTIES:
+:CUSTOM_ID: markov-chains
+:END:
+* Matrix Factorization
+:PROPERTIES:
+:CUSTOM_ID: matrix-fact
+:END:
+* Computer Graphics
+:PROPERTIES:
+:CUSTOM_ID: graphics
+:END:
+* Subspaces
+:PROPERTIES:
+:CUSTOM_ID: subspaces
+:END:
+* Dimension and Rank
+:PROPERTIES:
+:CUSTOM_ID: dim-rank
+:END:
+* Eigenvalues and Eigenvectors
+:PROPERTIES:
+:CUSTOM_ID: eigenvectors
+:END:
+* The Characteristic Equation
+:PROPERTIES:
+:CUSTOM_ID: char-eq
+:END:
+* Diagonalization
+:PROPERTIES:
+:CUSTOM_ID: diagonalization
+:END:
+* Orthogonality
+:PROPERTIES:
+:CUSTOM_ID: ortho
+:END:
+* PageRank
+:PROPERTIES:
+:CUSTOM_ID: pagerank
+:END:
+* Orthogonal Projection
+:PROPERTIES:
+:CUSTOM_ID: ortho-proj
+:END:
+* Least Squares
+:PROPERTIES:
+:CUSTOM_ID: least-sqs
+:END:
+* Linear Models
+:PROPERTIES:
+:CUSTOM_ID: linear-models
+:END:
