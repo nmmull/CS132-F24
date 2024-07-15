@@ -1,7 +1,7 @@
 #+title: CAS CS 132
 #+subtitle: UNDER CONSTRUCTION
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../globalStyle.css" />
-#+OPTIONS: html-style:nil H:2 toc:1 num:nil
+#+OPTIONS: html-style:nil H:2 toc:nil num:nil
 | Title    | Geometric Algorithms |
 | Location | Boston University    |
 | Semester | Fall 2024            |
@@ -11,13 +11,10 @@ prepare students for courses in the CS cirriculum at BU which require
 some degree of linear algebra. It is based on (and depends heavily on
 the material of) the version of the course taught by [[https://www.cs.bu.edu/fac/crovella/][Mark Crovella]].
 
-* Pages
-+ [[file:topics.org][Topics]]
-+ Material
+* Links
++ [[file:material.org][Material]]
 + Information
 + [[https://nmmull.github.io/pages/policies.html][Policies]]
-
-* Links
 + Piazza
 + Gradescope
 + *Programming:*
@@ -112,5 +109,3 @@ the material of) the version of the course taught by [[https://www.cs.bu.edu/fac
   + TBD
 + *Course Assistants:*
   + TBD
-
-* Log

@@ -1,0 +1,19 @@
+#+title: Material
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../globalStyle.css" />
+#+OPTIONS: html-style:nil H:1 toc:t num:nil
+#+HTML_LINK_HOME: index.html
+* Reading
+** Linear Equations:
+*** Required:
+**** LINK
+*** Optional:
+**** LINK
+*** Slides:
+**** PDF
+**** PDF annotated
+** Gaussian Elimination:
+* Assignments
+* Discussions
+* Code
+* Midterm
+* Final
