@@ -6,5 +6,6 @@ A = Matrix([
   [90000, 13000, 21000, 813000],
   [41000, 19000, 34000, 571000]])
 
+# pretty print the row-reduced echelon form
 sp.pprint(A.rref()[0])
 

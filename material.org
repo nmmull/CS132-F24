@@ -1,0 +1,63 @@
+#+title: Material
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../globalStyle.css" />
+#+OPTIONS: html-style:nil H:1 toc:t num:nil
+#+HTML_LINK_HOME: index.html
+* Assignments
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+* Discussions
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+15.
+* Code
+* Slides
+** Linear Equations
+** Gaussian Elimination
+** Vector Equations
+** Matrix-Vector Equations
+** Linear Independence
+** Numerics and NumPy
+** Linear Transformations
+** Matrices of Linear Transformations
+** Matrix Algebra
+** Numerics and NumPy
+** Matrix Inverse
+** Invertible Matrix Theorem
+** Algebraic Graph Theory
+** Markov Chains
+** Matrix Factorization
+** Computer Graphics
+** Subspaces
+** Dimension and Rank
+** Eigenvalues and Eigenvectors
+** The Characteristic Equation
+** Diagonalization
+** Orthogonality
+** PageRank
+** Orthogonal Projection
+** Least Squares
+** Linear Models
+* Midterm
+* Final
