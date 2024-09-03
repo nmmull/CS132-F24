@@ -10,6 +10,7 @@ pkgs.mkShellNoCC {
       scipy
       matplotlib
       sympy
+      pip
     ]))
   ];
 }
