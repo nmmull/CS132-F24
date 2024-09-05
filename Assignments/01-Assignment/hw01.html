@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-05 Thu 11:49 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Homework 1</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="../../myStyle.css" />
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'left',
+      displayIndent: '2em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'left',
+      displayIndent: '2em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up"><a href="../../material.html">↩</a></div><div id="content" class="content">
+<h1 class="title">Homework 1</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org62ded55">1. Interpreting RREFs</a>
+<ul>
+<li><a href="#org95c79cd">1.1. (5 points)</a></li>
+<li><a href="#org0377e9a">1.2. (5 points)</a></li>
+<li><a href="#org29440c7">1.3. (5 points)</a></li>
+</ul>
+</li>
+<li><a href="#orgc7cf90f">2. Solving Linear Systems</a>
+<ul>
+<li><a href="#orgf8d5815">2.1. (5 points)</a></li>
+<li><a href="#org9ab52b6">2.2. (5 points)</a></li>
+</ul>
+</li>
+<li><a href="#orgfc6d0da">3. Every Echelon Form</a></li>
+<li><a href="#org8e044ae">4. Embezzlement Charges</a></li>
+<li><a href="#org8572896">5. Echelon Forms (Programming)</a></li>
+</ul>
+</div>
+</div>
+<p>
+The following assignment is due <b>Thursday 9/12 by 11:59 PM</b>.  You
+should submit all your written solutions to Gradescope as a single
+pdf.  Follow the instructions in the programming problem for code
+solutions.
+</p>
+<ul class="org-ul">
+<li>Your solutions must be <i>exceptionally neat</i> and the final answer in
+your solution to each problem must be <i>abundantly clear</i>, e.g.,
+surrounded in a very visible box.  The graders have license to dock
+points for illegible or unclear solutions.</li>
+<li>For the written part, choose the correct pages corresponding to each
+problem in Gradescope.  Note that Gradescope registers your
+submission as soo as you submit it, so you don't need to rush to
+choose the pages. <b>You will recieve no credit if you do not choose
+the correct pages, no exceptions.</b></li>
+</ul>
+<div id="outline-container-org62ded55" class="outline-2">
+<h2 id="org62ded55"><span class="section-number-2">1.</span> Interpreting RREFs</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+For each of the following systems of linear equations, write down
+</p>
+<ul class="org-ul">
+<li>its augmented matrix</li>
+<li>its reduced echelon form</li>
+<li>whether it has
+<ul class="org-ul">
+<li>no solutions</li>
+<li>a unique solution</li>
+<li>infinitely many solutions</li>
+</ul></li>
+</ul>
+<p>
+You <i>do not</i> need to show your work for how you got the RREF. <i>Hint:</i>
+You can use <code>a.rref()</code> from SymPy.
+</p>
+</div>
+
+<div id="outline-container-org95c79cd" class="outline-3">
+<h3 id="org95c79cd"><span class="section-number-3">1.1.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-1-1">
+\begin{align*}
+x_1 - 2x_2 + 5x_3 &= 6 \\
+-2x_1 + 6x_2 - 11x_3 + 7x_4 &= -8 \\
+5x_1 - 10 x_2 + 25x_3 + 3x_4 &= 30
+\end{align*}
+</div>
+</div>
+
+<div id="outline-container-org0377e9a" class="outline-3">
+<h3 id="org0377e9a"><span class="section-number-3">1.2.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-1-2">
+\begin{align*}
+x_1 - 3x_2 + 4x_3 &= 0 \\
+-x_1 + 6x_2 + x_3 &= 4 \\
+23x_2 + 5x_3 &= 9
+\end{align*}
+</div>
+</div>
+
+<div id="outline-container-org29440c7" class="outline-3">
+<h3 id="org29440c7"><span class="section-number-3">1.3.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-1-3">
+\begin{align*}
+x_1 + 5x_2 + 3x_3 &= -4 \\
+x_1 + 6x_2 + 7x_3 &= -13 \\
+-2x_1 - 12 x_2 - 14 x_3 &= 25
+\end{align*}
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc7cf90f" class="outline-2">
+<h2 id="orgc7cf90f"><span class="section-number-2">2.</span> Solving Linear Systems</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+For each of the following systems of linear equations, write down its
+augmented matrix and find its RREF.  You must show your work,
+including each intermediate matrix in the reduction and the row
+operations you used.
+</p>
+
+<p>
+Also write the solution to each system.  <i>Hint:</i> There is a unique solution in each case.
+</p>
+</div>
+
+<div id="outline-container-orgf8d5815" class="outline-3">
+<h3 id="orgf8d5815"><span class="section-number-3">2.1.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-2-1">
+\begin{align*}
+2x + 4y &= 29 \\
+-6x - 10y &= -75
+\end{align*}
+</div>
+</div>
+
+<div id="outline-container-org9ab52b6" class="outline-3">
+<h3 id="org9ab52b6"><span class="section-number-3">2.2.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-2-2">
+\begin{align*}
+x + 3y - 3z &= -2 \\
+2x + 7y + 7z &= -5 \\
+x - 2y - z &= 3
+\end{align*}
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfc6d0da" class="outline-2">
+<h2 id="orgfc6d0da"><span class="section-number-2">3.</span> Every Echelon Form</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+(10 points) Write down every \(3 \times 3\) RREF matrix with at
+least two pivot positions whose entries are either \(0\) or \(1\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8e044ae" class="outline-2">
+<h2 id="org8e044ae"><span class="section-number-2">4.</span> Embezzlement Charges</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+(15 points) You're investigating a claim that, out of five competing
+car companies who purchase engine parts from the same suppliers, one
+purportedly underestimated their total spending by $1,300,000.
+Companies are required to report their total spending, and you've been
+able to determine how many units (× 10,000) of each part that each
+company has purchased.  You <i>haven't</i> been unable to determine how
+much each item costs per unit (it's an industry secret), but you can
+assume that each company pays the same amount per unit.  Given the
+following data, which company is falsifying their records?  Explain
+your answer.  <i>Hint:</i> Think of table below as a system of linear
+equations.  How would you interpret a solution?  You may (and probably
+should) use <code>a.rref()</code> from Sympy.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Company</th>
+<th scope="col" class="org-right">Part A</th>
+<th scope="col" class="org-right">Part B</th>
+<th scope="col" class="org-right">Part C</th>
+<th scope="col" class="org-right">Part D</th>
+<th scope="col" class="org-right">Part E</th>
+<th scope="col" class="org-right">Total (× $100,000)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Company A</td>
+<td class="org-right">15</td>
+<td class="org-right">3</td>
+<td class="org-right">24</td>
+<td class="org-right">36</td>
+<td class="org-right">182</td>
+<td class="org-right">1013</td>
+</tr>
+
+<tr>
+<td class="org-left">Company B</td>
+<td class="org-right">5</td>
+<td class="org-right">3</td>
+<td class="org-right">14</td>
+<td class="org-right">25</td>
+<td class="org-right">100</td>
+<td class="org-right">552</td>
+</tr>
+
+<tr>
+<td class="org-left">Company C</td>
+<td class="org-right">15</td>
+<td class="org-right">3</td>
+<td class="org-right">24</td>
+<td class="org-right">46</td>
+<td class="org-right">188</td>
+<td class="org-right">1012</td>
+</tr>
+
+<tr>
+<td class="org-left">Company D</td>
+<td class="org-right">5</td>
+<td class="org-right">0</td>
+<td class="org-right">5</td>
+<td class="org-right">10</td>
+<td class="org-right">40</td>
+<td class="org-right">225</td>
+</tr>
+
+<tr>
+<td class="org-left">Company E</td>
+<td class="org-right">15</td>
+<td class="org-right">3</td>
+<td class="org-right">26</td>
+<td class="org-right">47</td>
+<td class="org-right">190</td>
+<td class="org-right">1056</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org8572896" class="outline-2">
+<h2 id="org8572896"><span class="section-number-2">5.</span> Echelon Forms (Programming)</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+(12 points) In this programming exercise, you'll be building some
+predicates for checking if a matrix is in (row-reduced) echelon form.
+The primary motivation of this exercise is to get used to manipulating
+SymPy matrices, particularly via array slicing.
+</p>
+
+<p>
+You're given starter code in the file <code>hw01.py</code>. Please do not change
+the name of this file when you submit it, nor the names of functions
+included in the starter code.  You may add your own functions, but you
+are not expected to.  You're only required to <b>fill in the TODO items
+in the starter code.</b>
+</p>
+
+<p>
+You're required to implement the following functions:
+</p>
+
+<ul class="org-ul">
+<li><code>leading_entry_index(a)</code> given a \(1 \times n\) SymPy matrix <code>a</code>,
+return the index of the first nonzero entry of <code>a</code>.  Return <code>None</code>
+otherwise.</li>
+<li><code>is_echelon(a)</code> given a SymPy matrix <code>a</code>, return <code>True</code> if <code>a</code> is
+in echelon form and return <code>False</code> otherwise.</li>
+<li><code>is_rref(a)</code> given a SymPy matrix <code>a</code>, return <code>True</code> if <code>a</code> is in
+<i>reduced</i> echelon from and return <code>False</code> otherwise.</li>
+</ul>
+
+<p>
+Some guidelines:
+</p>
+
+<ul class="org-ul">
+<li>Work incrementally. Don't try to implement the entire program and
+then debug it once you're done.</li>
+
+<li>Take a look at the <a href="https://docs.sympy.org/latest/modules/matrices/matrices.html">SymPy library for matrices</a>. There are a lot of
+useful functions there, we won't get to all of them.  The following
+may be useful for this exercise:
+<ul class="org-ul">
+<li><code>sympy.zeros(i, j)</code></li>
+<li><code>a.is_zero_matrix</code></li>
+<li><code>a.row(i)</code> and <code>a[i,:]</code></li>
+<li><code>a.rows</code></li>
+<li><code>a.col(j)</code> and <code>a[:,j]</code></li>
+<li><code>a.cols</code></li>
+</ul></li>
+</ul>
+
+<p>
+You'll upload the single python file <code>hw01.py</code> to Gradescope with your
+implementations of TODO items in the code.  You won't have access to
+the tests on Gradescope, but we'll provide a subset of the unit tests
+which you can run yourself in a directory called <code>tests</code>.  You can run
+<code>python -m unittest</code> to run these tests.
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
