@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-12 Thu 13:38 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Homework 2</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="../../myStyle.css" />
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'left',
+      displayIndent: '2em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'left',
+      displayIndent: '2em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up"><a href="../../material.html">↩</a></div><div id="content" class="content">
+<h1 class="title">Homework 2</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org4ca1ef5">1. Every Echelon Form</a></li>
+<li><a href="#orgd77082a">2. General Form Solutions</a>
+<ul>
+<li><a href="#orga00953a">2.1. (3 Points)</a></li>
+<li><a href="#org701263c">2.2. (3 Points)</a></li>
+<li><a href="#org2ce2bc4">2.3. (3 Points)</a></li>
+<li><a href="#orgb177bb3">2.4. (3 Points)</a></li>
+</ul>
+</li>
+<li><a href="#org9843183">3. Integer Solutions</a></li>
+<li><a href="#orgcc19ffd">4. Changing Free Variables</a>
+<ul>
+<li><a href="#orgccac58e">4.1. (5 points)</a></li>
+<li><a href="#org9df851d">4.2. (5 points)</a></li>
+</ul>
+</li>
+<li><a href="#orgc351d5b">5. Back-Substitution (Programming)</a></li>
+</ul>
+</div>
+</div>
+<p>
+The following assignment is due <b>Thursday 9/19 by 11:59 PM</b>.  You
+should submit all your written solutions to Gradescope as a single
+pdf.  Follow the instructions in the programming problem for code
+solutions.
+</p>
+<ul class="org-ul">
+<li>Your solutions must be <i>exceptionally neat</i> and the final answer in
+your solution to each problem must be <i>abundantly clear</i>, e.g.,
+surrounded in a very visible box.  The graders have license to dock
+points for illegible or unclear solutions.</li>
+<li>For the written part, choose the correct pages corresponding to each
+problem in Gradescope.  Note that Gradescope registers your
+submission as soon as you submit it, so you don't need to rush to
+choose the pages. <b>You will receive no credit if you do not choose
+the correct pages, no exceptions.</b></li>
+</ul>
+<div id="outline-container-org4ca1ef5" class="outline-2">
+<h2 id="org4ca1ef5"><span class="section-number-2">1.</span> Every Echelon Form</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+(10 points) Write down every \(3 \times 3\) RREF matrix with at
+least two pivot positions whose entries are either \(0\) or \(1\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd77082a" class="outline-2">
+<h2 id="orgd77082a"><span class="section-number-2">2.</span> General Form Solutions</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+For each of the following linear systems, write down
+</p>
+<ul class="org-ul">
+<li>the RREF of its augmented matrix</li>
+<li>its solution in general form (if the system has no solution then
+write down <b>no solution</b>)</li>
+</ul>
+
+<p>
+You do not need to show your work. Just write the above
+information. <i>Hint:</i> As usual, consider using <code>a.rref()</code>
+</p>
+</div>
+<div id="outline-container-orga00953a" class="outline-3">
+<h3 id="orga00953a"><span class="section-number-3">2.1.</span> (3 Points)</h3>
+<div class="outline-text-3" id="text-2-1">
+\begin{align*}
+-x - 2y - z &= -4 \\
+x + 2y &= 3 \\
+-2x -4y + z &= -7
+\end{align*}
+</div>
+</div>
+<div id="outline-container-org701263c" class="outline-3">
+<h3 id="org701263c"><span class="section-number-3">2.2.</span> (3 Points)</h3>
+<div class="outline-text-3" id="text-2-2">
+\begin{align*}
+88x_1 + 61x_2 + 8x_3 + 61 x_4 &= -68 \\
+37x_1 + 14x_2 + 72x_3 + 41 x_4 &= -460 \\
+57x_1 + 59x_2 + 69x_3 + 75x_4 &= -333 \\
+92 x_1 + 60x_2 + 28x_3 + 72x_4 &= -192
+\end{align*}
+</div>
+</div>
+<div id="outline-container-org2ce2bc4" class="outline-3">
+<h3 id="org2ce2bc4"><span class="section-number-3">2.3.</span> (3 Points)</h3>
+<div class="outline-text-3" id="text-2-3">
+\begin{align*}
+x_2 + x_3 + x_4 + 3x_5 - x_6 + 2x_7 &= 34 \\
+x_3 - x_4 + 4x_5 &= -14 \\
+2x_2 - 4x_3 + 8x_4 - 18x_5 - x_6 &= 110 \\
+3x_3 - 3x_4 + 12 x_5 + 2x_7 &= -18 \\
+x_2 + 4x_3 - 2x_4 + 15x_5 - x_6 + 7x_7 &= 52
+\end{align*}
+</div>
+</div>
+<div id="outline-container-orgb177bb3" class="outline-3">
+<h3 id="orgb177bb3"><span class="section-number-3">2.4.</span> (3 Points)</h3>
+<div class="outline-text-3" id="text-2-4">
+\begin{align*}
+8x_1 + 3x_2 - 3x_3 &= -4 \\
+-3x_1 + 8x_2 + 5x_3 &= -4 \\
+6x_1 + 7x_2 - 3x_3 &= -3 \\
+8x_1 + x_2 - x_3 &= -4
+\end{align*}
+</div>
+</div>
+</div>
+<div id="outline-container-org9843183" class="outline-2">
+<h2 id="org9843183"><span class="section-number-2">3.</span> Integer Solutions</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+(10 points) Find a solution to the linear system below with the
+following properties:
+</p>
+
+<ul class="org-ul">
+<li>The solution consists entirely of integer values</li>
+<li>The values in the solution are relatively prime, i.e., it's not
+possible to divide the solution by a number to get another integer
+solution. So \((2, 4, 6)\) does not satisfy this property but \((1, 2,
+  3)\) does.</li>
+</ul>
+
+<p>
+In addition to the solution, you must write down the RREF of the
+augmented matrix of this system, but otherwise, you don't have to
+show your work.<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
+</p>
+
+\begin{align*}
+4x_2 + x_3 &= 16 \\
+9x_1 - 20x_2 - 8x_3 &= -71 \\
+3x_1 - 8x_2 - 3x_3 &= -29
+\end{align*}
+</div>
+</div>
+
+<div id="outline-container-orgcc19ffd" class="outline-2">
+<h2 id="orgcc19ffd"><span class="section-number-2">4.</span> Changing Free Variables</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Consider the following general form solution
+</p>
+
+\begin{align*}
+x_1 &= 3x_2 - 2x_3 \\
+x_2 &\quad \text{is free} \\
+x_3 &\quad \text{is free} \\
+x_4 &= 2 + x_3
+\end{align*}
+</div>
+
+<div id="outline-container-orgccac58e" class="outline-3">
+<h3 id="orgccac58e"><span class="section-number-3">4.1.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Write down another general form solution which describes the same
+solution set, but for which \(x_3\) is basic and \(x_4\) is free.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9df851d" class="outline-3">
+<h3 id="org9df851d"><span class="section-number-3">4.2.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Write down a RREF matrix which yields the general form solution you
+wrote down in the previous part.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc351d5b" class="outline-2">
+<h2 id="orgc351d5b"><span class="section-number-2">5.</span> Back-Substitution (Programming)</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+(20 points) In this programming exercise, you'll be implementing the
+back-substitution part of Gaussian elimination.  You'll also be
+building some predicates for checking if a matrix is in (row-reduced)
+echelon form.  The primary motivation of this exercise is to get used
+to manipulating SymPy matrices, particularly via array slicing.
+</p>
+
+<p>
+You're given starter code in the file <code>hw02.py</code>. Please do not change
+the name of this file when you submit it, nor the names of functions
+included in the starter code.  You may add your own functions, but you
+are not expected to.  You're only required to <b>fill in the TODO items
+in the starter code.</b>
+</p>
+
+<p>
+You're required to implement the following functions:
+</p>
+
+<ul class="org-ul">
+<li><code>leading_entry_index(a)</code> given a \(1 \times n\) SymPy matrix <code>a</code>,
+return the index of the first nonzero entry of <code>a</code>.  Return <code>None</code>
+otherwise.</li>
+<li><code>is_echelon(a)</code> given a SymPy matrix <code>a</code>, return <code>True</code> if <code>a</code> is
+in echelon form and return <code>False</code> otherwise.</li>
+<li><code>is_rref(a)</code> given a SymPy matrix <code>a</code>, return <code>True</code> if <code>a</code> is in
+<i>reduced</i> echelon from and return <code>False</code> otherwise.</li>
+<li><code>back_sub(a)</code> given a SymPy matrix <code>a</code> <b>in echelon form</b>, <i>update</i>
+the matrix <code>a</code> so that it is in reduced echelon form.</li>
+</ul>
+
+<p>
+Some guidelines:
+</p>
+
+<ul class="org-ul">
+<li>Work incrementally. Don't try to implement the entire program and
+then debug it once you're done.</li>
+
+<li>Take a look at the <a href="https://docs.sympy.org/latest/modules/matrices/matrices.html">SymPy library for matrices</a>. There are a lot of
+useful functions there, we won't get to all of them.  The following
+may be useful for this exercise:
+<ul class="org-ul">
+<li><code>sympy.zeros(i, j)</code></li>
+<li><code>a.is_zero_matrix</code></li>
+<li><code>a.row(i)</code> and <code>a[i,:]</code></li>
+<li><code>a.rows</code></li>
+<li><code>a.col(j)</code> and <code>a[:,j]</code></li>
+<li><code>a.cols</code></li>
+</ul></li>
+</ul>
+
+<p>
+You'll upload the single python file <code>hw02.py</code> to Gradescope with your
+implementations of TODO items in the code.  You won't have access to
+the tests on Gradescope, but we'll provide a subset of the unit tests
+which you can run yourself in a directory called <code>tests</code>.  You can run
+<code>python -m unittest</code> to run these tests.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">This is the process we would use to find a valid solution to the problem of balancing chemical equations.</p></div></div>
+
+
+</div>
+</div></div>
+</body>
+</html>
