@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-19 Thu 13:37 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Homework 3</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="../../myStyle.css" />
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'left',
+      displayIndent: '2em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'left',
+      displayIndent: '2em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up"><a href="../../material.html">↩</a></div><div id="content" class="content">
+<h1 class="title">Homework 3</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgcb081dd">1. Plane Intersection and RREFs</a></li>
+<li><a href="#org00ccf91">2. Linear Combinations</a>
+<ul>
+<li><a href="#orgdcd4c64">2.1. (5 points)</a></li>
+<li><a href="#orgf12a2a8">2.2. (5 points)</a></li>
+</ul>
+</li>
+<li><a href="#org8edb2fe">3. Spans and Linear Equations</a>
+<ul>
+<li><a href="#org70e005b">3.1. (5 points)</a></li>
+<li><a href="#org26d1fa8">3.2. (5 points)</a></li>
+</ul>
+</li>
+<li><a href="#org178455a">4. Solving Matrix-Vector Equations</a></li>
+<li><a href="#org26bd56d">5. Quadratic Interpolation</a>
+<ul>
+<li><a href="#orge7f1a3b">5.1. (5 points)</a></li>
+<li><a href="#org03ed514">5.2. (10 points)</a></li>
+</ul>
+</li>
+<li><a href="#orgc9e648f">6. A Small Interface (Programming)</a></li>
+</ul>
+</div>
+</div>
+<p>
+The following assignment is due <b>Thursday 9/26 by 11:59 PM</b>.  You
+should submit all your written solutions to Gradescope as a single
+pdf.  Follow the instructions in the programming problem for code
+solutions.
+</p>
+<ul class="org-ul">
+<li>Your solutions must be <i>exceptionally neat</i> and the final answer in
+your solution to each problem must be <i>abundantly clear</i>, e.g.,
+surrounded in a very visible box.  The graders have license to dock
+points for illegible or unclear solutions.</li>
+<li>For the written part, choose the correct pages corresponding to each
+problem in Gradescope.  Note that Gradescope registers your
+submission as soon as you submit it, so you don't need to rush to
+choose the pages. <b>You will receive no credit if you do not choose
+the correct pages, no exceptions.</b></li>
+</ul>
+<div id="outline-container-orgcb081dd" class="outline-2">
+<h2 id="orgcb081dd"><span class="section-number-2">1.</span> Plane Intersection and RREFs</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+(10 points) Suppose you are given a system of linear equations with
+three variables and two equations, and that \((4, 1, 0)\) and \((2, 4,
+1)\) are solutions to this system.  You are also given that the two
+equations define <i>distinct</i> planes in \(\mathbb R^3\). Write down the
+<i>reduced echelon form</i> of the augmented matrix for this system.
+</p>
+</div>
+</div>
+<div id="outline-container-org00ccf91" class="outline-2">
+<h2 id="org00ccf91"><span class="section-number-2">2.</span> Linear Combinations</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Determine if the given vector \(\mathbf v\) in each part is in the span
+of the following vectors.
+</p>
+
+\begin{align*}
+\mathbf v_1 = \begin{bmatrix}10 \\ -33 \\ -5 \\ -30 \\ -3\end{bmatrix} \qquad
+\mathbf v_2 = \begin{bmatrix}-47 \\ -1 \\ -2 \\ -25 \\ 24\end{bmatrix} \qquad
+\mathbf v_3 = \begin{bmatrix}31 \\ -34\\ 11 \\ 39 \\ 25\end{bmatrix} \qquad
+\mathbf v_4 =\begin{bmatrix}-14 \\ 22 \\ 12 \\ 42 \\ 3\end{bmatrix}
+\end{align*}
+
+<p>
+If it isn't, write <b>not in the span</b>. If it is, <i>write \(\mathbf v\) as
+a linear combination of the above vectors.</i> In each case, you <i>must</i>
+also write the augmented matrix of the linear system you solved, but
+otherwise, you do not need to show your work.
+</p>
+</div>
+<div id="outline-container-orgdcd4c64" class="outline-3">
+<h3 id="orgdcd4c64"><span class="section-number-3">2.1.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-2-1">
+\begin{align*}
+\mathbf v =
+\begin{bmatrix}
+42 \\ -23 \\ 98 \\ 11 \\ -87
+\end{bmatrix}
+\end{align*}
+</div>
+</div>
+
+<div id="outline-container-orgf12a2a8" class="outline-3">
+<h3 id="orgf12a2a8"><span class="section-number-3">2.2.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-2-2">
+\begin{align*}
+\mathbf v =
+\begin{bmatrix}
+87 \\ -19 \\ -24 \\ -61 \\ -79
+\end{bmatrix}
+\end{align*}
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8edb2fe" class="outline-2">
+<h2 id="org8edb2fe"><span class="section-number-2">3.</span> Spans and Linear Equations</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org70e005b" class="outline-3">
+<h3 id="org70e005b"><span class="section-number-3">3.1.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Find a linear equation in three variables whose point set is
+exactly<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
+</p>
+
+\begin{align*}
+\mathsf{span}
+\left\{
+\begin{bmatrix} 1 \\ 0 \\ -2 \end{bmatrix},
+\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}
+\right\}
+\end{align*}
+<p>
+You <i>must</i> show your work.
+</p>
+</div>
+</div>
+<div id="outline-container-org26d1fa8" class="outline-3">
+<h3 id="org26d1fa8"><span class="section-number-3">3.2.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Find a linear equation in three variables whose point set is exactly
+</p>
+
+\begin{align*}
+\left\{
+\mathbf v +
+\begin{bmatrix} 2 \\ -3 \\ 2 \end{bmatrix}
+\ \text{where} \
+\mathbf v \in
+\mathsf{span}
+\left\{
+\begin{bmatrix} 1 \\ 1 \\ -5 \end{bmatrix},
+\begin{bmatrix} 0 \\ 1 \\ -1 \end{bmatrix}
+\right\}
+\right\}
+\end{align*}
+<p>
+In other words, every point in the point set of the equation can be
+expressed as the sum of \([2 \ \ (-3) \ \ 2]^T\) and a vector in the
+span of \([1 \ \ 1 \ \ (-5)]^T\) and \([0 \ \ 1 \ \ (-1)]^T\). You <i>must</i>
+show your work.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org178455a" class="outline-2">
+<h2 id="org178455a"><span class="section-number-2">4.</span> Solving Matrix-Vector Equations</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+(5 points) Write down the general form solution to the following
+matrix-vector equation.  You do not need to show your work.
+</p>
+
+\begin{align*}
+\begin{bmatrix}
+1 & 1 & 3 & 1 & -7 & 1 \\
+-5 & -4 & -14 & -3 & 24 & -8\\
+0 & -2 & -2 & -3 & 21 & 3 \\
+-6 & -3 & -15 & -2 & 11 & -8
+\end{bmatrix}
+\mathbf x =
+\begin{bmatrix}
+7 \\ -16 \\ -20 \\ -27
+\end{bmatrix}
+\end{align*}
+</div>
+</div>
+
+<div id="outline-container-org26bd56d" class="outline-2">
+<h2 id="org26bd56d"><span class="section-number-2">5.</span> Quadratic Interpolation</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+It is well known<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>
+that any three distinct points in the plane define a <i>unique</i>
+quadratic equation.  Given three points \((x_1, y_1)\), \((x_2, y_2)\) and
+\((x_3, y_3)\), the equation \(y = ax^2 + bx + c\) which passes through these
+three points is given by the solution to the following matrix
+equation.
+</p>
+
+\begin{align*}
+\begin{bmatrix}
+x_1^2 & x_1 & 1	\\
+x_2^2 & x_2 & 1	\\
+x_3^2 & x_3 & 1
+\end{bmatrix}
+\begin{bmatrix} a \\ b \\ c \end{bmatrix}
+=
+\begin{bmatrix} y_1 \\ y_2 \\ y_3 \end{bmatrix}
+\end{align*}
+</div>
+<div id="outline-container-orge7f1a3b" class="outline-3">
+<h3 id="orge7f1a3b"><span class="section-number-3">5.1.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Convince yourself of the above fact.  Then use it to determine the
+unique quadratic equation which passes through the points \((2, 13)\),
+\((3, 25)\) and \((-2, 5)\).  You <i>must</i> also write down the augmented
+matrix of the linear system you solved.
+</p>
+</div>
+</div>
+<div id="outline-container-org03ed514" class="outline-3">
+<h3 id="org03ed514"><span class="section-number-3">5.2.</span> (10 points)</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Write down the RREF of the matrix
+</p>
+
+\begin{bmatrix}
+x^2 & x & 1 & y \\
+1 & 1 & 1 & 1 \\
+\left(\frac{x + 1}{2}\right)^2 & \frac{x + 1}{2} & 1 & \frac{y + 1}{2}
+\end{bmatrix}
+
+<p>
+in terms of \(x\) and \(y\), assuming \(x \not = 1\).  Explain your answer.
+<i>Hint:</i> Don't try to row reduce it. It's not worth it.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc9e648f" class="outline-2">
+<h2 id="orgc9e648f"><span class="section-number-2">6.</span> A Small Interface (Programming)</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+We've mentioned in passing several times at this point that we <i>could</i>
+implement everything in this course on our own.  We won't generally do
+this, but for the practice we're going to do it once.  You're given
+an interface for vectors and matrices in a file called <code>matlib.py</code>.
+Please read through this file carefully and make sure you understand
+how these objects work. <b>You're not allowed to change anything in this
+file.</b>
+</p>
+
+<p>
+You're given starter code in the file <code>hw03.py</code>. Please do not change
+the name of this file when you submit it, nor the names of functions
+included in the starter code.  You may add your own functions, but you
+are not expected to.  You're only required to <b>fill in the TODO items
+in the starter code.</b>
+</p>
+
+<p>
+You're required to implement the following functions:
+</p>
+
+<ul class="org-ul">
+<li><code>vec_scale(val, vec)</code> returns the result of scaling the vector <code>vec</code>
+by the float <code>val</code></li>
+<li><code>vec_add(v1, v2)</code> returns the sum of the vectors <code>v1</code> and <code>v2</code>.
+This function <i>must</i> raise an exception with message <code>"DIMENSION
+  MISMATCH"</code> if its inputs do not have the same number of entries</li>
+<li><code>vec_inner(v1, v2)</code> returns the inner product of the vectors <code>v1</code>
+and <code>v2</code>.  This function <i>must</i> raise an exception with then message
+<code>"DIMENSION MISMATCH"</code> if its inputs do not have the same number of
+entries</li>
+<li><code>mat_vec_mul(a, v)</code> returns the product of the matrix <code>a</code> times the
+vector <code>v</code>.  This function <i>must</i> raise an exception with message
+<code>"DIMENSION MISMATCH"</code> if <code>a</code> does not have the same number of
+columns as <code>v</code> has entries</li>
+</ul>
+
+<p>
+You'll upload the single python file <code>hw03.py</code> to Gradescope with your
+implementations of TODO items in the code.  You won't have access to
+the tests on Gradescope, but we'll provide a subset of the unit tests
+which you can run yourself in a file called <code>tests.py</code>.  You can run
+<code>python -m unittest</code> to run these tests.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Note that we're conflating points and vectors here.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Or, in any case, you can take it as a given.</p></div></div>
+
+
+</div>
+</div></div>
+</body>
+</html>
