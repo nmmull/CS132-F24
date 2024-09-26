@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-26 Thu 13:32 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Homework 4</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="../../myStyle.css" />
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'left',
+      displayIndent: '2em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'left',
+      displayIndent: '2em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up"><a href="../../material.html">↩</a></div><div id="content" class="content">
+<h1 class="title">Homework 4</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgfcf885f">1. Linear Independence</a>
+<ul>
+<li><a href="#orge07b82c">1.1. (5 points)</a></li>
+<li><a href="#orgca918b7">1.2. (5 points)</a></li>
+</ul>
+</li>
+<li><a href="#orge6a143e">2. Solve for \(h\)</a>
+<ul>
+<li><a href="#org3313fff">2.1. (5 points)</a></li>
+<li><a href="#orgc4ef462">2.2. (5 points)</a></li>
+</ul>
+</li>
+<li><a href="#org8f509ad">3. Dependence Relations</a>
+<ul>
+<li><a href="#orgac66224">3.1. (5 points)</a></li>
+<li><a href="#org130368a">3.2. (5 points)</a></li>
+</ul>
+</li>
+<li><a href="#orga1cb6fa">4. Linear Transformations</a></li>
+<li><a href="#orgb8c8cf9">5. Non-Linearity</a>
+<ul>
+<li><a href="#orgb8e608c">5.1. (5 points)</a></li>
+<li><a href="#orga7d20bc">5.2. (2 points EC)</a></li>
+</ul>
+</li>
+<li><a href="#orgae1c367">6. NumPy Predicates</a></li>
+</ul>
+</div>
+</div>
+<p>
+The following assignment is due <b>Thursday 10/3 by 11:59 PM</b>.  You
+should submit all your written solutions to Gradescope as a single
+pdf.  Follow the instructions in the programming problem for code
+solutions.
+</p>
+<ul class="org-ul">
+<li>Your solutions must be <i>exceptionally neat</i> and the final answer in
+your solution to each problem must be <i>abundantly clear</i>, e.g.,
+surrounded in a very visible box.  The graders have license to dock
+points for illegible or unclear solutions.</li>
+<li>For the written part, choose the correct pages corresponding to each
+problem in Gradescope.  Note that Gradescope registers your
+submission as soon as you submit it, so you don't need to rush to
+choose the pages. <b>You will receive no credit if you do not choose
+the correct pages, no exceptions.</b></li>
+</ul>
+<div id="outline-container-orgfcf885f" class="outline-2">
+<h2 id="orgfcf885f"><span class="section-number-2">1.</span> Linear Independence</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Consider four vectors \(\mathbf v_1\), \(\mathbf v_2\), \(\mathbf
+v_3\) and \(\mathbf v_4\) in \(\mathbb R^4\) with the property that
+</p>
+
+\begin{align*}
+\begin{bmatrix}
+\mathbf v_1 & \mathbf v_2 & \mathbf v_3 & \mathbf v_4
+\end{bmatrix}
+\sim
+\begin{bmatrix}
+1 & 1 & 3 & -2 \\
+0 & 4 & -4 & 12 \\
+0 & 0 & 3 & 3 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+\end{align*}
+</div>
+<div id="outline-container-orge07b82c" class="outline-3">
+<h3 id="orge07b82c"><span class="section-number-3">1.1.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Is \(\mathbf v_4 \in \mathsf{span}\{\mathbf v_1, \mathbf v_2, \mathbf
+v_3\}\)? If so, write \(\mathbf v_4\) as a linear combination of the vectors
+\(\mathbf v_1\), \(\mathbf v_2\) and \(\mathbf v_3\). If not, write <b>not in span</b>.  Show your work.
+</p>
+</div>
+</div>
+<div id="outline-container-orgca918b7" class="outline-3">
+<h3 id="orgca918b7"><span class="section-number-3">1.2.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Are the vectors \(\mathbf v_2\), \(\mathbf v_3\), and \(\mathbf v_4\)
+linearly independent? If so, justify your answer. If not, write down a
+dependence relation for these vectors.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge6a143e" class="outline-2">
+<h2 id="orge6a143e"><span class="section-number-2">2.</span> Solve for \(h\)</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+For each of the following sets of vectors, determine the values of
+\(h\), if any, for which the set of vectors is linearly dependent.  Show
+your work.
+</p>
+</div>
+<div id="outline-container-org3313fff" class="outline-3">
+<h3 id="org3313fff"><span class="section-number-3">2.1.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-2-1">
+\begin{align*}
+\mathbf v_1 =
+\begin{bmatrix} 1 \\ 9 \\ -3 \end{bmatrix}
+\qquad
+\mathbf v_2 =
+\begin{bmatrix} 1 \\ 4 \\ 3 \end{bmatrix}
+\qquad
+\mathbf v_3 =
+\begin{bmatrix} -2 \\ h \\ -6 \end{bmatrix}
+\qquad
+\end{align*}
+</div>
+</div>
+<div id="outline-container-orgc4ef462" class="outline-3">
+<h3 id="orgc4ef462"><span class="section-number-3">2.2.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-2-2">
+\begin{align*}
+\mathbf v_1 =
+\begin{bmatrix} 1 \\ -1 \\ h \end{bmatrix}
+\qquad
+\mathbf v_2 =
+\begin{bmatrix} 4 \\ 0 \\ 2 \end{bmatrix}
+\qquad
+\mathbf v_3 =
+\begin{bmatrix} 13 \\ h \\ -1 \end{bmatrix}
+\qquad
+\end{align*}
+</div>
+</div>
+</div>
+<div id="outline-container-org8f509ad" class="outline-2">
+<h2 id="org8f509ad"><span class="section-number-2">3.</span> Dependence Relations</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Consider the following set of vectors
+</p>
+\begin{align*}
+\mathbf v_1 =
+\begin{bmatrix} -10 \\ -6 \\ 2 \\ 0 \\ 8 \\ -3 \\ -4 \end{bmatrix}
+\qquad
+\mathbf v_2 =
+\begin{bmatrix} -3 \\ 3 \\ -8 \\ 5 \\ -2 \\ 7 \\ -3 \end{bmatrix}
+\qquad
+\mathbf v_3 =
+\begin{bmatrix} -20 \\ -12 \\ 4 \\ 0 \\ 16 \\ -6 \\ -8 \end{bmatrix}
+\qquad
+\mathbf v_4 =
+\begin{bmatrix} 6 \\ 1 \\ 3 \\ -1 \\ 10 \\ 7 \\ 4 \end{bmatrix}
+\qquad
+\mathbf v_5 =
+\begin{bmatrix} -2 \\ -10 \\ 10 \\ -5 \\ -3 \\ -10 \\ -5 \end{bmatrix}
+\qquad
+\mathbf v_6 =
+\begin{bmatrix} -2 \\ 3 \\ -9 \\ -2 \\ -9 \\ -2 \\ -7 \end{bmatrix}
+\qquad
+\mathbf v_7 =
+\begin{bmatrix} 13 \\ 25 \\ -22 \\ 13 \\ 24 \\ 41 \\ 15 \end{bmatrix}
+\end{align*}
+</div>
+<div id="outline-container-orgac66224" class="outline-3">
+<h3 id="orgac66224"><span class="section-number-3">3.1.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Determine the <i>first</i> vector which can be written as a linear
+combination as of the vectors which precede it. Write this vectors as
+a linear combination of the vectors which precede it.<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
+</p>
+</div>
+</div>
+<div id="outline-container-org130368a" class="outline-3">
+<h3 id="org130368a"><span class="section-number-3">3.2.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Determine a dependence relation for the entire set of vectors with the
+following properties.
+</p>
+<ul class="org-ul">
+<li>The coefficients of the dependence relation are relatively prime integers.</li>
+<li>The number of nonzero coefficients is <i>maximum</i>, i.e., there is no
+other dependence relation with a greater number of nonzero coefficients.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga1cb6fa" class="outline-2">
+<h2 id="orga1cb6fa"><span class="section-number-2">4.</span> Linear Transformations</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+(10 points) Let \(T\) be a linear transformation with the following
+input-output behavior.
+</p>
+
+\begin{align*}
+T
+\left(
+\begin{bmatrix}
+-3 \\ 9 \\ 5 \\ 4
+\end{bmatrix}
+\right)
+=
+\begin{bmatrix}
+-4 \\ 3 \\ 4
+\end{bmatrix}
+\qquad
+T
+\left(
+\begin{bmatrix}
+-9 \\ -5 \\ 0 \\ -7
+\end{bmatrix}
+\right)
+=
+\begin{bmatrix}
+0 \\ 1 \\ 2
+\end{bmatrix}
+\qquad
+T
+\left(
+\begin{bmatrix}
+9 \\ -1 \\ -2 \\ 4
+\end{bmatrix}
+\right)
+=
+\begin{bmatrix}
+3 \\ -3 \\ 7
+\end{bmatrix}
+\end{align*}
+<p>
+Determine the value of
+</p>
+
+\begin{align*}
+T
+\left(
+\begin{bmatrix}
+30 \\ 0 \\ -7 \\ 22
+\end{bmatrix}
+\right)
+
+\end{align*}
+</div>
+</div>
+<div id="outline-container-orgb8c8cf9" class="outline-2">
+<h2 id="orgb8c8cf9"><span class="section-number-2">5.</span> Non-Linearity</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Consider the following transformation.
+</p>
+
+\begin{align*}
+\begin{bmatrix}
+x \\ y \\ z
+\end{bmatrix}
+\mapsto
+\begin{bmatrix}
+(x^3 + y^3 + z^3)^{1 / 3} \\ y + z
+\end{bmatrix}
+\end{align*}
+</div>
+
+<div id="outline-container-orgb8e608c" class="outline-3">
+<h3 id="orgb8e608c"><span class="section-number-3">5.1.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Demonstrate that the above transforamtion is not linear.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga7d20bc" class="outline-3">
+<h3 id="orga7d20bc"><span class="section-number-3">5.2.</span> (2 points EC)</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+<b>Extra Credit.</b> Demonstrate that the above transformation <i>is</i> homogeneous.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgae1c367" class="outline-2">
+<h2 id="orgae1c367"><span class="section-number-2">6.</span> NumPy Predicates</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+(10 points) As we start to use NumPy more, it'll be useful to have a
+collection of predicates (i.e., functions which return Boolean values)
+for the problems we consider in this course.  Please make sure you've read
+through the <a href="https://nmmull.github.io/CS132-Notes/NumPy/notes.html">supplementary NumPy tutorial</a> before getting started.
+</p>
+
+<p>
+You're given starter code in the file <code>hw04.py</code>. Please do not change
+the name of this file when you submit it, nor the names of functions
+included in the starter code. You may add your own functions, but you
+are not expected to. You're only required to <b>fill in the TODO items in
+the starter code.</b>
+</p>
+
+<p>
+You're required to implement the following functions.  It may look
+like a large number of functions, but they will require very few lines of
+code.
+</p>
+
+<ul class="org-ul">
+<li><code>is_con_aug(a)</code>, assuming <code>a</code> represents the augmented matrix of a
+linear system, returns <code>True</code> if that system is consistent and
+<code>False</code> otherwise.</li>
+<li><code>is_con_mat_eq(A, b)</code> returns <code>True</code> if the matrix equation
+\(A\mathbf v = \mathbf b\) has a solution, and <code>False</code> otherwise.</li>
+<li><code>in_span(v, A)</code> returns <code>True</code> if \(v\) is in the span of the columns
+of \(A\), and <code>False</code> otherwise.</li>
+<li><code>num_pivots(A)</code> returns the number of pivot positions in <code>A</code>.</li>
+<li><code>full_span(A)</code> returns <code>True</code> if the columns of <code>A</code> have full span
+and <code>False</code> otherwise.</li>
+<li><code>lin_ind(A)</code> returns <code>True</code> if the columns of <code>A</code> are linearly
+independent, and <code>False</code> otherwise.</li>
+</ul>
+
+<p>
+See the started code for more information about each function.  You
+may also want to look at the function <a href="https://numpy.org/doc/stable/reference/generated/numpy.nonzero.html"><code>numpy.nonzero(a)</code></a> in the numpy
+documentation.  Lastly, <b>you don't need to deal with dimension
+mismatches.</b> You may assume that inputs are well-formed.
+</p>
+
+<p>
+You'll upload the single python file <code>hw04.py</code> to Gradescope with your
+implementations of TODO items in the code. As usual we provide a
+subset of the unit tests which you can run yourself in a file called
+<code>tests.py</code>. You can use the command <code>python -m unittest</code> in the
+terminal to run these tests.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">It will be
+clearer to write your final solution using the vector names of the
+form \(\mathbf v_i\).  So, for example, if you find that \(\mathbf v_4 =
+3 \mathbf v_1 + 2 \mathbf v_2 + 4 \mathbf v_3\), and that neither
+\(\mathbf v_2\) nor \(\mathbf v_3\) can be written as a linear combination
+of the vectors which precede it, then \(\mathbf v_4 = 3 \mathbf v_1 + 2
+\mathbf v_2 + 4 \mathbf v_3\) should be your final solution.</p></div></div>
+
+
+</div>
+</div></div>
+</body>
+</html>
