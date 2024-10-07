@@ -11,6 +11,8 @@ pkgs.mkShellNoCC {
       matplotlib
       sympy
       pip
+      pandas
+      networkx
     ]))
   ];
 }
