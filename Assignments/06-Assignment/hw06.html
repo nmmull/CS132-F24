@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-10 Thu 12:38 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Homework 6</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="../../myStyle.css" />
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'left',
+      displayIndent: '2em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'left',
+      displayIndent: '2em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up"><a href="../../material.html">↩</a></div><div id="content" class="content">
+<h1 class="title">Homework 6</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb376df3">1. Matrix Inverses</a>
+<ul>
+<li><a href="#org53cb185">1.1. (3 points)</a></li>
+<li><a href="#orgdb45842">1.2. (3 points)</a></li>
+<li><a href="#org202090f">1.3. (4 points)</a></li>
+</ul>
+</li>
+<li><a href="#orgfbbb017">2. Matrix Powers</a>
+<ul>
+<li><a href="#orgb27f6a4">2.1. (5 points)</a></li>
+<li><a href="#org7e40056">2.2. (5 points)</a></li>
+</ul>
+</li>
+<li><a href="#org3e47f17">3. Matrix Algebra</a>
+<ul>
+<li><a href="#orgc93456a">3.1. (5 points)</a></li>
+<li><a href="#orgba9b3ff">3.2. (5 points)</a></li>
+</ul>
+</li>
+<li><a href="#org1d5a7dc">4. Laplacian Matrix</a>
+<ul>
+<li><a href="#orgc8ebe1e">4.1. (5 points)</a></li>
+<li><a href="#org126622b">4.2. (5 points)</a></li>
+</ul>
+</li>
+<li><a href="#orgbf93e63">5. Six Degrees (Programming)</a></li>
+</ul>
+</div>
+</div>
+<p>
+The following assignment is due <b>Thursday 10/17 by 11:59 PM</b>.  You
+should submit all your written solutions to Gradescope as a single
+pdf.  Follow the instructions in the programming problem for code
+solutions.
+</p>
+<ul class="org-ul">
+<li>Your solutions must be <i>exceptionally neat</i> and the final answer in
+your solution to each problem must be <i>abundantly clear</i>, e.g.,
+surrounded in a very visible box.  The graders have license to dock
+points for illegible or unclear solutions.</li>
+<li>For the written part, choose the correct pages corresponding to each
+problem in Gradescope.  Note that Gradescope registers your
+submission as soon as you submit it, so you don't need to rush to
+choose the pages. <b>You will receive no credit if you do not choose
+the correct pages, no exceptions.</b></li>
+</ul>
+<div id="outline-container-orgb376df3" class="outline-2">
+<h2 id="orgb376df3"><span class="section-number-2">1.</span> Matrix Inverses</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Compute the inverses of each of the following matrices.  You must show
+you work.  You may use <code>sympy.rref()</code> or <code>a.inv()</code> to check your
+answer but your work must clearly show the steps you took by
+hand.<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
+</p>
+</div>
+<div id="outline-container-org53cb185" class="outline-3">
+<h3 id="org53cb185"><span class="section-number-3">1.1.</span> (3 points)</h3>
+<div class="outline-text-3" id="text-1-1">
+\begin{bmatrix}
+2 & -1 \\
+3 & 3
+\end{bmatrix}
+</div>
+</div>
+<div id="outline-container-orgdb45842" class="outline-3">
+<h3 id="orgdb45842"><span class="section-number-3">1.2.</span> (3 points)</h3>
+<div class="outline-text-3" id="text-1-2">
+\begin{bmatrix}
+1 & 0 & -2 \\
+-3 & 1 & 4 \\
+2 & -3 & 4
+\end{bmatrix}
+</div>
+</div>
+<div id="outline-container-org202090f" class="outline-3">
+<h3 id="org202090f"><span class="section-number-3">1.3.</span> (4 points)</h3>
+<div class="outline-text-3" id="text-1-3">
+\begin{bmatrix}
+\cos \theta & -\sin \theta \\
+\cos \theta + \sin \theta & \cos \theta - \sin \theta
+\end{bmatrix}
+
+<p>
+Leave your answer in terms of \(\cos \theta\) and \(\sin \theta\).  Recall
+that \(\sin (-\theta) = -\sin \theta\) and \(\cos(-\theta) = \cos\theta\).
+<i>Hint:</i> Find a matrix \(A\) such that the above matrix is \(A\) times the
+rotation matrix.  Then find the inverse of the product of matrices.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfbbb017" class="outline-2">
+<h2 id="orgfbbb017"><span class="section-number-2">2.</span> Matrix Powers</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgb27f6a4" class="outline-3">
+<h3 id="orgb27f6a4"><span class="section-number-3">2.1.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-2-1">
+\begin{align*}
+\begin{bmatrix}
+1 & 0 & 2 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}^{n}
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & -3 & 1
+\end{bmatrix}^{-n}
+\end{align*}
+
+<p>
+Compute the following matrix expression.  You must show your work.
+Your answer should be a single matrix with entries given in terms of
+\(n\).  Note that \(A^{-n}\) is the same as \((A^n)^{-1}\).
+</p>
+</div>
+</div>
+<div id="outline-container-org7e40056" class="outline-3">
+<h3 id="org7e40056"><span class="section-number-3">2.2.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-2-2">
+\begin{align*}
+\begin{bmatrix}
+1 & 1 \\
+-1 & 0
+\end{bmatrix}^{n}
+=
+\begin{bmatrix}
+1 & 0 \\
+0 & 1
+\end{bmatrix}
+\end{align*}
+
+<p>
+Determine the smallest positive integer \(n\) such that the above equation
+holds.  You must show your work.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3e47f17" class="outline-2">
+<h2 id="org3e47f17"><span class="section-number-2">3.</span> Matrix Algebra</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgc93456a" class="outline-3">
+<h3 id="orgc93456a"><span class="section-number-3">3.1.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Let \(A\) \(B\) and \(C\) be matrices such that \(A = A^{-1}\) and \(C = C^T\) and
+</p>
+\begin{align*}
+A(C^{-1}(AB)^T)^T C
+\end{align*}
+<p>
+is a well-defined matrix product.  Simplify this expression using the
+algebraic properties of matrix operations.  You must show your work.
+</p>
+</div>
+</div>
+<div id="outline-container-orgba9b3ff" class="outline-3">
+<h3 id="orgba9b3ff"><span class="section-number-3">3.2.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-3-2">
+\begin{align*}
+X^2 +
+\begin{bmatrix}
+3 & 0 \\
+0 & 1
+\end{bmatrix}
+X
++
+\begin{bmatrix}
+2 & 0 \\
+0 & 0
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & 0 \\
+0 & 0
+\end{bmatrix}
+\end{align*}
+
+<p>
+Determine <i>three</i> matrices in \(\mathbb R^{2 \times 2}\) that satisfy
+the above equation.  You must show your work.  In particular, you must
+demonstrate that each matrix in your solution satisfies the equation.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1d5a7dc" class="outline-2">
+<h2 id="org1d5a7dc"><span class="section-number-2">4.</span> Laplacian Matrix</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Let \(G = (V, E)\) be a graph with \(n\) vertices \(v_1, v_2, \dots, v_n\).
+In class we discussed the \(n \times n\) adjacency matrix given by
+</p>
+\begin{align*}
+A_{ij} =
+\begin{cases}
+1 & (v_i, v_j) \in E \\
+0 & (v_i, v_j) \not \in E
+\end{cases}
+\end{align*}
+<p>
+There are many other matrices based on graphs. One is the \(n \times n\)
+<b>degree matrix</b> given by
+</p>
+\begin{align*}
+D_{ij} =
+\begin{cases}
+\deg(v_i) & i = j\\
+0 & i \not = j
+\end{cases}
+\end{align*}
+<p>
+where \(\deg(v)\) is the number of edges adjacent to \(v\).  Another is
+the \(n \times n\) <b>Laplacian matrix</b> given by
+</p>
+\begin{align*}
+L = D - A
+\end{align*}
+
+<p>
+For the following two graphs, write down
+</p>
+<ol class="org-ol">
+<li>its adjacency matrix</li>
+<li>its degree matrix</li>
+<li>its Laplacian matrix</li>
+<li>the number of pivot columns in its Laplacian matrix</li>
+</ol>
+</div>
+<div id="outline-container-orgc8ebe1e" class="outline-3">
+<h3 id="orgc8ebe1e"><span class="section-number-3">4.1.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-4-1">
+
+<div id="orgf10c4b0" class="figure">
+<p><img src="graph1.jpg" alt="graph1.jpg" width="300px" />
+</p>
+</div>
+
+<p>
+This graph is made up of two disjoint triangles, one with vertices
+\(v_1, v_4, v_5\) and one with vertices \(v_2, v_3, v_6\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org126622b" class="outline-3">
+<h3 id="org126622b"><span class="section-number-3">4.2.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-4-2">
+
+<div id="orgd854b50" class="figure">
+<p><img src="graph2.jpg" alt="graph2.jpg" width="300px" />
+</p>
+</div>
+
+<p>
+This graph is the same as the previous graph but with an additional
+edge connecting \(v_3\) and \(v_4\).
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbf93e63" class="outline-2">
+<h2 id="orgbf93e63"><span class="section-number-2">5.</span> Six Degrees (Programming)</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+The game <b>six degrees of Kevin Bacon</b> is played as follows.  The
+challenger chooses any actor \(A\), and the player needs to come up with
+a sequence of actors starting with Kevin Bacon and ending with actor
+\(A\) of length at most seven<sup><a id="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>  with the restriction that adjacent actors in the sequence
+have appeared in at least one film together.<sup><a id="fnr.3" class="footref" href="#fn.3" role="doc-backlink">3</a></sup>  This in principle works because Kevin Bacon has
+been in <i>a lot</i> of films, so it's almost always possible to
+come up with such a sequence, and there are <a href="https://oracleofbacon.org">Bacon sequence
+generators</a> all over the Internet.
+</p>
+
+<p>
+When we analyze this game formally, the situation depends quite a bit
+on the data.  In the dataset you will be analyzing for this problem,
+which includes only a subset of the most popular movies on IMBb from
+the years 1974-2021, not only is Kevin Bacon <i>not</i> the most
+well-connected actor, but <b>nearly every</b> actor is within six degrees
+of every other actor.<sup><a id="fnr.4" class="footref" href="#fn.4" role="doc-backlink">4</a></sup>  So in
+this problem, we're interested in the egde cases.
+</p>
+
+<p>
+You're given start code in the file <code>hw06.py</code>.  Please do not change
+the name of this file when you submit it, nor the names of functions
+or variables included in the starter code.  You're allowed add your
+own functions but you're not expected to.  You should only need to
+fill in the TODO items in the starter code.
+</p>
+
+<p>
+You're also given a costar network in the file
+<code>costar-network.edgelist.gz</code><sup><a id="fnr.5" class="footref" href="#fn.5" role="doc-backlink">5</a></sup>, which is a <b>simple graph</b> in which two actors are
+connected by an edge if they've been in a film together.  Therefore,
+playing the six-degrees game is a matter of finding a path in this
+graph of length at most 6.
+</p>
+
+<p>
+The network is represented as a list of edges which can be read in by
+NetworkX.  If you're interested, you can uncompress it to see which
+actors are connected by which movies.
+</p>
+
+<p>
+Finally, you're given a file called <code>costar.py</code> which builds the
+adjacency matrices for the given network and build the matrices used
+to reason about reachability.  You should look through this file to
+get a sense of how to work with NetworkX.
+</p>
+
+<p>
+You're required to implement the functions:
+</p>
+
+<ul class="org-ul">
+<li><code>at_least_k_steps_matrix(a, k)</code></li>
+<li><code>reach(a, j)</code></li>
+<li><code>max_reach(a)</code></li>
+<li><code>doesnt_have_max_reach(a)</code></li>
+</ul>
+
+<p>
+You're also required to fill in the variables:
+</p>
+
+<ul class="org-ul">
+<li><code>disconnected</code></li>
+</ul>
+
+<p>
+with the appropriate values.  See the starter code for more details
+about these functions and variables.
+</p>
+
+<p>
+You'll upload a single python file <code>hw06.py</code> to Gradescope with your
+implementation of the TODO items.  There is a small subset of provided
+tests which you can run using the command <code>python3 -m
+unittest</code>. <b>Note:</b> We're only grading your code in <code>hw06.py</code>. Please
+do not include any computations on the costar network in this file,
+such computations will be too costly for our autograder and it may not
+be able to grade your code.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">For example, if you row-reduce, you don't have to write
+down the reductions you used, but your work should clearly indicate
+the steps you took to getting to the final RREF.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">Kevin Bacon is zero degrees from
+himself.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3" role="doc-backlink">3</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">It's usually also a
+part of the game to come up with the films themselves, but another
+variation is to omit the movies and check that the challenger can
+verify the sequence.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4" role="doc-backlink">4</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">So if we're playing this game with people
+who don't know the random indie films that actors have been in, then
+the choice to start with Kevin Bacon is not so interesting.</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5" role="doc-backlink">5</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">It was generated from <a href="https://www.kaggle.com/datasets/darinhawley/imdb-films-by-actor-for-10k-actors">this Kaggle
+dataset</a>.</p></div></div>
+
+
+</div>
+</div></div>
+</body>
+</html>
