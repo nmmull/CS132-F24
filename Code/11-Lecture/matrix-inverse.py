@@ -9,8 +9,8 @@ a = np.array(
 # inverse of a
 ainv = np.linalg.inv(a)
 
-# a with the identity on the right
-aid = np.hstack([a, np.eye(3)])
+# a with the identity on the right + (plus extra column for b)
+aid = np.hstack([a, np.eye(3), np.array([[5, -1, 6]]).T])
 
 # row reductions
 aid[2] -= aid[0]
@@ -23,7 +23,7 @@ print()
 print("------------------------------")
 print("The matrix [ A I ]:")
 print("------------------------------")
-print(aid)
+print(aid[:,:6])
 
 print()
 print("------------------------------")
@@ -42,3 +42,24 @@ print("------------------------------")
 print("Augmented matrix for Ax = e3:")
 print("------------------------------")
 print(aid[:,[0, 1, 2, 5]])
+
+print()
+print("------------------------------")
+print("Augmented matrix for Ax = b:")
+print("------------------------------")
+print(aid[:,[0, 1, 2, 6]])
+
+
+
+print()
+print("------------------------------")
+print("A^{-1}:")
+print("------------------------------")
+print(aid[:,3:6])
+
+
+print()
+print("------------------------------")
+print("A^{-1} b:")
+print("------------------------------")
+print(aid[:,3:6] @ np.array([[5, -1, 6]]).T)
