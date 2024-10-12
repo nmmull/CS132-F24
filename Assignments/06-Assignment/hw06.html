@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-11 Fri 14:29 -->
+<!-- 2024-10-12 Sat 10:09 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Homework 6</title>
@@ -49,37 +49,37 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgb0e1a01">1. Matrix Inverses</a>
+<li><a href="#orgfa641b9">1. Matrix Inverses</a>
 <ul>
-<li><a href="#org1bf9bea">1.1. (3 points)</a></li>
-<li><a href="#org49cb6eb">1.2. (3 points)</a></li>
-<li><a href="#orgdfce1cc">1.3. (4 points)</a></li>
+<li><a href="#orgd878460">1.1. (3 points)</a></li>
+<li><a href="#org1566ed3">1.2. (3 points)</a></li>
+<li><a href="#orgf96b42b">1.3. (4 points)</a></li>
 </ul>
 </li>
-<li><a href="#orgbc38203">2. Matrix Powers</a>
+<li><a href="#orgc0a4e51">2. Matrix Powers</a>
 <ul>
-<li><a href="#org56f9bbe">2.1. (5 points)</a></li>
-<li><a href="#org2b9f536">2.2. (5 points)</a></li>
+<li><a href="#org16a606b">2.1. (5 points)</a></li>
+<li><a href="#org1268123">2.2. (5 points)</a></li>
 </ul>
 </li>
-<li><a href="#orgbf5e887">3. Matrix Algebra</a>
+<li><a href="#orgf8a1f65">3. Matrix Algebra</a>
 <ul>
-<li><a href="#org7508824">3.1. (5 points)</a></li>
-<li><a href="#org9432765">3.2. (5 points)</a></li>
+<li><a href="#orgf10767e">3.1. (5 points)</a></li>
+<li><a href="#orge050c32">3.2. (5 points)</a></li>
 </ul>
 </li>
-<li><a href="#orge1a2685">4. Laplacian Matrix</a>
+<li><a href="#orgd0fb8fb">4. Laplacian Matrix</a>
 <ul>
-<li><a href="#org3af9a25">4.1. (5 points)</a></li>
-<li><a href="#org2ba62a5">4.2. (5 points)</a></li>
+<li><a href="#orge03fc99">4.1. (5 points)</a></li>
+<li><a href="#org2c1603a">4.2. (5 points)</a></li>
 </ul>
 </li>
-<li><a href="#org066019c">5. Six Degrees (Programming)</a></li>
+<li><a href="#org7f92246">5. Six Degrees (Programming)</a></li>
 </ul>
 </div>
 </div>
 <p>
-The following assignment is due <b>Thursday 10/17 by 11:59 PM</b>.  You
+The following assignment is due <b>Thursday 10/24 by 11:59 PM</b>.  You
 should submit all your written solutions to Gradescope as a single
 pdf.  Follow the instructions in the programming problem for code
 solutions.
@@ -95,8 +95,8 @@ submission as soon as you submit it, so you don't need to rush to
 choose the pages. <b>You will receive no credit if you do not choose
 the correct pages, no exceptions.</b></li>
 </ul>
-<div id="outline-container-orgb0e1a01" class="outline-2">
-<h2 id="orgb0e1a01"><span class="section-number-2">1.</span> Matrix Inverses</h2>
+<div id="outline-container-orgfa641b9" class="outline-2">
+<h2 id="orgfa641b9"><span class="section-number-2">1.</span> Matrix Inverses</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Compute the inverses of each of the following matrices.  You must show
@@ -105,8 +105,8 @@ answer but your work must clearly show the steps you took by
 hand.<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
 </p>
 </div>
-<div id="outline-container-org1bf9bea" class="outline-3">
-<h3 id="org1bf9bea"><span class="section-number-3">1.1.</span> (3 points)</h3>
+<div id="outline-container-orgd878460" class="outline-3">
+<h3 id="orgd878460"><span class="section-number-3">1.1.</span> (3 points)</h3>
 <div class="outline-text-3" id="text-1-1">
 \begin{bmatrix}
 2 & -1 \\
@@ -114,8 +114,8 @@ hand.<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></
 \end{bmatrix}
 </div>
 </div>
-<div id="outline-container-org49cb6eb" class="outline-3">
-<h3 id="org49cb6eb"><span class="section-number-3">1.2.</span> (3 points)</h3>
+<div id="outline-container-org1566ed3" class="outline-3">
+<h3 id="org1566ed3"><span class="section-number-3">1.2.</span> (3 points)</h3>
 <div class="outline-text-3" id="text-1-2">
 \begin{bmatrix}
 1 & 0 & -2 \\
@@ -124,8 +124,8 @@ hand.<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></
 \end{bmatrix}
 </div>
 </div>
-<div id="outline-container-orgdfce1cc" class="outline-3">
-<h3 id="orgdfce1cc"><span class="section-number-3">1.3.</span> (4 points)</h3>
+<div id="outline-container-orgf96b42b" class="outline-3">
+<h3 id="orgf96b42b"><span class="section-number-3">1.3.</span> (4 points)</h3>
 <div class="outline-text-3" id="text-1-3">
 \begin{bmatrix}
 \cos \theta & -\sin \theta \\
@@ -141,12 +141,12 @@ rotation matrix.  Then find the inverse of the product of matrices.
 </div>
 </div>
 </div>
-<div id="outline-container-orgbc38203" class="outline-2">
-<h2 id="orgbc38203"><span class="section-number-2">2.</span> Matrix Powers</h2>
+<div id="outline-container-orgc0a4e51" class="outline-2">
+<h2 id="orgc0a4e51"><span class="section-number-2">2.</span> Matrix Powers</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org56f9bbe" class="outline-3">
-<h3 id="org56f9bbe"><span class="section-number-3">2.1.</span> (5 points)</h3>
+<div id="outline-container-org16a606b" class="outline-3">
+<h3 id="org16a606b"><span class="section-number-3">2.1.</span> (5 points)</h3>
 <div class="outline-text-3" id="text-2-1">
 \begin{align*}
 \begin{bmatrix}
@@ -168,8 +168,8 @@ Your answer should be a single matrix with entries given in terms of
 </p>
 </div>
 </div>
-<div id="outline-container-org2b9f536" class="outline-3">
-<h3 id="org2b9f536"><span class="section-number-3">2.2.</span> (5 points)</h3>
+<div id="outline-container-org1268123" class="outline-3">
+<h3 id="org1268123"><span class="section-number-3">2.2.</span> (5 points)</h3>
 <div class="outline-text-3" id="text-2-2">
 \begin{align*}
 \begin{bmatrix}
@@ -191,12 +191,12 @@ holds.  You must show your work.
 </div>
 </div>
 
-<div id="outline-container-orgbf5e887" class="outline-2">
-<h2 id="orgbf5e887"><span class="section-number-2">3.</span> Matrix Algebra</h2>
+<div id="outline-container-orgf8a1f65" class="outline-2">
+<h2 id="orgf8a1f65"><span class="section-number-2">3.</span> Matrix Algebra</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org7508824" class="outline-3">
-<h3 id="org7508824"><span class="section-number-3">3.1.</span> (5 points)</h3>
+<div id="outline-container-orgf10767e" class="outline-3">
+<h3 id="orgf10767e"><span class="section-number-3">3.1.</span> (5 points)</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Let \(A\) \(B\) and \(C\) be matrices such that \(A = A^{-1}\) and \(C = C^T\) and
@@ -210,8 +210,8 @@ algebraic properties of matrix operations.  You must show your work.
 </p>
 </div>
 </div>
-<div id="outline-container-org9432765" class="outline-3">
-<h3 id="org9432765"><span class="section-number-3">3.2.</span> (5 points)</h3>
+<div id="outline-container-orge050c32" class="outline-3">
+<h3 id="orge050c32"><span class="section-number-3">3.2.</span> (5 points)</h3>
 <div class="outline-text-3" id="text-3-2">
 \begin{align*}
 X^2 +
@@ -241,8 +241,8 @@ demonstrate that each matrix in your solution satisfies the equation.
 </div>
 </div>
 
-<div id="outline-container-orge1a2685" class="outline-2">
-<h2 id="orge1a2685"><span class="section-number-2">4.</span> Laplacian Matrix</h2>
+<div id="outline-container-orgd0fb8fb" class="outline-2">
+<h2 id="orgd0fb8fb"><span class="section-number-2">4.</span> Laplacian Matrix</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Let \(G = (V, E)\) be a graph with \(n\) vertices \(v_1, v_2, \dots, v_n\).
@@ -285,11 +285,11 @@ For the following two graphs, write down
 computer to solve for this)</li>
 </ol>
 </div>
-<div id="outline-container-org3af9a25" class="outline-3">
-<h3 id="org3af9a25"><span class="section-number-3">4.1.</span> (5 points)</h3>
+<div id="outline-container-orge03fc99" class="outline-3">
+<h3 id="orge03fc99"><span class="section-number-3">4.1.</span> (5 points)</h3>
 <div class="outline-text-3" id="text-4-1">
 
-<div id="orgab8a716" class="figure">
+<div id="orgf045c1b" class="figure">
 <p><img src="graph1.jpg" alt="graph1.jpg" width="300px" />
 </p>
 </div>
@@ -301,11 +301,11 @@ This graph is made up of two disjoint triangles, one with vertices
 </div>
 </div>
 
-<div id="outline-container-org2ba62a5" class="outline-3">
-<h3 id="org2ba62a5"><span class="section-number-3">4.2.</span> (5 points)</h3>
+<div id="outline-container-org2c1603a" class="outline-3">
+<h3 id="org2c1603a"><span class="section-number-3">4.2.</span> (5 points)</h3>
 <div class="outline-text-3" id="text-4-2">
 
-<div id="org42e4d49" class="figure">
+<div id="org8725fb2" class="figure">
 <p><img src="graph2.jpg" alt="graph2.jpg" width="300px" />
 </p>
 </div>
@@ -318,8 +318,8 @@ edge connecting \(v_3\) and \(v_4\).
 </div>
 </div>
 
-<div id="outline-container-org066019c" class="outline-2">
-<h2 id="org066019c"><span class="section-number-2">5.</span> Six Degrees (Programming)</h2>
+<div id="outline-container-org7f92246" class="outline-2">
+<h2 id="org7f92246"><span class="section-number-2">5.</span> Six Degrees (Programming)</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 The game <b>six degrees of Kevin Bacon</b> is played as follows.  The
