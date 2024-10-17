@@ -20,9 +20,14 @@ def rref(a):
                 ef[k] -= ef[i] * ef[k, lead]
     return ef
 
+
 # print(rref(a - np.eye(2)))
 # print(rref(b - np.eye(3)))
 
 # print()
 # print(f'x1 = {0.6 * (1 / 1.6)}')
 # print(f'x2 = {1/1.6}')
+
+# sol = np.array(sp.linalg.null_space(b - np.eye(3))[:,0])
+# sol /= sum(sol)
+# print(sol)
