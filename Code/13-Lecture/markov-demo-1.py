@@ -11,7 +11,7 @@ p4 = np.array([8000, 3100])
 
 # print(np.linalg.matrix_power(a, 20) @ p)
 
-# for i in range(10):
-#     print()
-#     print(f'a to the {10 ** i} times p: ')
-#     print(np.linalg.matrix_power(a, 10 ** i) @ p)
+for i in range(10):
+    print()
+    print(f'a to the {10 ** i} times p: ')
+    print(np.linalg.matrix_power(a, 10 ** i) @ p)
