@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-24 Thu 15:08 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Homework 7</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="../../myStyle.css" />
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'left',
+      displayIndent: '2em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'left',
+      displayIndent: '2em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up"><a href="../../material.html">↩</a></div><div id="content" class="content">
+<h1 class="title">Homework 7</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org0b32abc">1. Stochastic Matrices</a>
+<ul>
+<li><a href="#org121c002">1.1. (5 points)</a></li>
+<li><a href="#orgc617d5c">1.2. (5 points)</a></li>
+<li><a href="#orgfa23534">1.3. (5 points)</a></li>
+<li><a href="#org8708336">1.4. (5 points)</a></li>
+<li><a href="#orgeb17835">1.5. (5 points)</a></li>
+<li><a href="#orgfefa8d5">1.6. (5 points)</a></li>
+</ul>
+</li>
+<li><a href="#orgbbd2680">2. Market Prediction</a></li>
+<li><a href="#orgab32e07">3. LU Factorizations</a>
+<ul>
+<li><a href="#org3b89468">3.1. (2 points)</a></li>
+<li><a href="#org7b0376c">3.2. (4 points)</a></li>
+<li><a href="#orgab503e8">3.3. (4 points)</a></li>
+</ul>
+</li>
+<li><a href="#orga3c914b">4. Sparse Factorization</a>
+<ul>
+<li><a href="#org9bbcdd4">4.1. (2 points)</a></li>
+<li><a href="#org1cce9ea">4.2. (4 points)</a></li>
+<li><a href="#org14634fc">4.3. (4 points)</a></li>
+</ul>
+</li>
+<li><a href="#orgfaed349">5. ChatMarkov</a></li>
+</ul>
+</div>
+</div>
+<p>
+The following assignment is due <b>Thursday 10/31 by 11:59 PM</b>.  You
+should submit all your written solutions to Gradescope as a single
+pdf.  Follow the instructions in the programming problem for code
+solutions.
+</p>
+<ul class="org-ul">
+<li>Your solutions must be <i>exceptionally neat</i> and the final answer in
+your solution to each problem must be <i>abundantly clear</i>, e.g.,
+surrounded in a very visible box.  The graders have license to dock
+points for illegible or unclear solutions.</li>
+<li>For the written part, choose the correct pages corresponding to each
+problem in Gradescope.  Note that Gradescope registers your
+submission as soon as you submit it, so you don't need to rush to
+choose the pages. <b>You will receive no credit if you do not choose
+the correct pages, no exceptions.</b></li>
+</ul>
+<div id="outline-container-org0b32abc" class="outline-2">
+<h2 id="org0b32abc"><span class="section-number-2">1.</span> Stochastic Matrices</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+For each of the following matrices:
+</p>
+
+<ul class="org-ul">
+<li>Draw the state diagram for \(A\).  You should label each node with a
+positive integer for the column of \(A\) which describes its edges.</li>
+<li>Determine if \(A\) is regular. If it is write down the smallest
+exponent \(k\) such that \(A^k\) has strictly positive values. If it is
+not, then justify your answer.</li>
+<li>Determine the general form solution of the equation \((A - I)\mathbf
+  x = \mathbf 0\). You may use a computer to do this.  You answer
+should be expressed in fractions, not decimals.</li>
+<li>Determine a steady state vector for \(A\).  If the steady state vector
+is you unique, write <b>the steady state is unique</b>.  You <i>must</i> do
+this by hand and show your work.</li>
+</ul>
+</div>
+
+<div id="outline-container-org121c002" class="outline-3">
+<h3 id="org121c002"><span class="section-number-3">1.1.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-1-1">
+\begin{bmatrix}
+0.9 & 0.6 \\
+0.1 & 0.4
+\end{bmatrix}
+</div>
+</div>
+<div id="outline-container-orgc617d5c" class="outline-3">
+<h3 id="orgc617d5c"><span class="section-number-3">1.2.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-1-2">
+\begin{bmatrix}
+1 & 0.3 & 0.4 \\
+0 & 0.7 & 0.1 \\
+0 & 0 & 0.5
+\end{bmatrix}
+</div>
+</div>
+<div id="outline-container-orgfa23534" class="outline-3">
+<h3 id="orgfa23534"><span class="section-number-3">1.3.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-1-3">
+\begin{bmatrix}
+0 & 0.5 & 0.5 \\
+0.5 & 0 & 0.5 \\
+0.5 & 0.5 & 0 \\
+\end{bmatrix}
+</div>
+</div>
+<div id="outline-container-org8708336" class="outline-3">
+<h3 id="org8708336"><span class="section-number-3">1.4.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-1-4">
+\begin{bmatrix}
+0 & 0 & 1 \\
+1 & 0 & 0 \\
+0 & 1 & 0
+\end{bmatrix}
+</div>
+</div>
+<div id="outline-container-orgeb17835" class="outline-3">
+<h3 id="orgeb17835"><span class="section-number-3">1.5.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-1-5">
+\begin{bmatrix}
+0 & 0 & 0 & 0.5 \\
+1 & 0 & 0 & 0.3 \\
+0 & 1 & 0 & 0.2 \\
+0 & 0 & 1 & 0
+\end{bmatrix}
+</div>
+</div>
+<div id="outline-container-orgfefa8d5" class="outline-3">
+<h3 id="orgfefa8d5"><span class="section-number-3">1.6.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-1-6">
+\begin{bmatrix}
+0.4 & 0.8 & 0.5 & 0 \\
+0.6 & 0.2 & 0   & 0 \\
+0   & 0   & 0   & 0 \\
+0   & 0   & 0.5 & 1
+\end{bmatrix}
+</div>
+</div>
+</div>
+<div id="outline-container-orgbbd2680" class="outline-2">
+<h2 id="orgbbd2680"><span class="section-number-2">2.</span> Market Prediction</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+(6 points) Suppose you've been watching the stock price of your
+favorite company and you've discovered the following trends based on
+the data you've taken:
+</p>
+
+<ul class="org-ul">
+<li>If the price is <b>STEADY</b> there's a 70% chance it will remain steady
+the next day, but a 20% chance it will go <b>HIGH</b> and a 10% chance it
+will dip <b>LOW</b>.</li>
+<li>If the price is <b>HIGH</b> there's a 55% chance it will remain high the
+next day, but a 40% change it will go back to being <b>STEADY</b>, and
+just a 5% chance it will dip all the way down to <b>LOW</b>.</li>
+<li>If the price is <b>LOW</b>, there is a 60% change it will remain low the
+next day, but a 30% chance it will reset to <b>STEADY</b>, and a 10%
+chance it will suddenly jump to <b>HIGH</b>.</li>
+</ul>
+
+<p>
+Suppose that the price is currently <b>STEADY</b>.  In the long term, is
+more likely to remain <b>STEADY</b>, go up <b>HIGH</b>, or dip down <b>LOW</b>?
+Justify your answer.  You may use a computer to solve any systems you
+need to solve, and you must present your final answer in fractions, not
+decimals.
+</p>
+</div>
+</div>
+<div id="outline-container-orgab32e07" class="outline-2">
+<h2 id="orgab32e07"><span class="section-number-2">3.</span> LU Factorizations</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+For each of the following matrices, determine its LU factorization <i>by
+hand.</i> You must show your work.
+</p>
+</div>
+<div id="outline-container-org3b89468" class="outline-3">
+<h3 id="org3b89468"><span class="section-number-3">3.1.</span> (2 points)</h3>
+<div class="outline-text-3" id="text-3-1">
+\begin{bmatrix}
+2 & 3 \\
+1 & -4
+\end{bmatrix}
+</div>
+</div>
+
+<div id="outline-container-org7b0376c" class="outline-3">
+<h3 id="org7b0376c"><span class="section-number-3">3.2.</span> (4 points)</h3>
+<div class="outline-text-3" id="text-3-2">
+\begin{bmatrix}
+-3 & 0 & -6 & -9 \\
+0 & 2 & 4 & -4 \\
+3 & 2 & 10 & 9 \\
+-3 & 2 & -2 & -9
+\end{bmatrix}
+</div>
+</div>
+
+<div id="outline-container-orgab503e8" class="outline-3">
+<h3 id="orgab503e8"><span class="section-number-3">3.3.</span> (4 points)</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+<b>Without</b> doing any row operations, determine the LU factorization for
+the matrix obtained by applying the row operations
+</p>
+
+\begin{align*}
+R_3 &\gets R_3 - 2R_2 \\
+R_3 &\gets R_3 + R_1 \\
+R_2 &\gets R_2 + R_1 \\
+\end{align*}
+
+<p>
+to the matrix
+</p>
+
+\begin{bmatrix}
+2 & 8 & -4 & 1 \\
+0 & 0 & 3 & 2 \\
+0 & 0 & 0 & -7
+\end{bmatrix}
+
+<p>
+Justify your answer.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga3c914b" class="outline-2">
+<h2 id="orga3c914b"><span class="section-number-2">4.</span> Sparse Factorization</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+In this problem, you will use the provided code in <code>sparse.py</code> to
+benchmark LU factorization and matrix inversion.
+</p>
+</div>
+
+<div id="outline-container-org9bbcdd4" class="outline-3">
+<h3 id="org9bbcdd4"><span class="section-number-3">4.1.</span> (2 points)</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+The provided code includes a function <code>test_matrix</code> which
+builds a matrix given a positive integer parameter. Write down the
+matrix <code>test_matrix(4)</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1cce9ea" class="outline-3">
+<h3 id="org1cce9ea"><span class="section-number-3">4.2.</span> (4 points)</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Determine the number of entries in the inverse of <code>test_matrix(10 **
+3)</code>.  Then use <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.lu.html#scipy.linalg.lu"><code>scipy.lu</code></a> to determine the LU factorization of
+<code>test_matrix(10 ** 3)</code> and determine the number of entries in \(L\) and
+\(U\).  Read the linked documentation on <code>scipy.lu</code> for more details
+(you can ignore the permutation matrix in the given factorization).
+Report these three entry-counts in your solution.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org14634fc" class="outline-3">
+<h3 id="org14634fc"><span class="section-number-3">4.3.</span> (4 points)</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+Uncomment the code at the end of the file <code>sparse.py</code> and run it. Write
+down the printed values and discuss what they mean. In particular, is
+the amount of time that it takes to factor versus invert consistent
+with our discussion in lecture?
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfaed349" class="outline-2">
+<h2 id="orgfaed349"><span class="section-number-2">5.</span> ChatMarkov</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Large language models like GPT-4 use fancy techniques to predict what
+word or sequence of words should follow a given piece of text. It’s
+possible to build a very unfancy version of this using random
+walks. Given a corpus of text, we can build a state diagram whose
+nodes are words, and whose edges indicate word adjacency in the corpus
+weighted proportionally to the number of occurrences of that adjacent
+pair.  So words which tend to be next to each other will have larger
+weights on their edges.
+</p>
+
+<p>
+As an example, suppose we used the statement
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sent">a dog and a cat and a bird
+</pre>
+</div>
+
+<p>
+as our corpus. We can build a state diagram with nodes for each word
+</p>
+
+<div class="org-src-container">
+<pre class="src src-v">V = ["a", "dog", "and", "cat", "bird"]
+</pre>
+</div>
+
+<p>
+and with edges for each pair of adjacent words
+</p>
+
+<div class="org-src-container">
+<pre class="src src-e">E = [("a", "dog"), ("dog", "and"), ("and", "a"), ("a", "cat"), ...]
+W = [1/3         , 1             , 1           , 1/3         , ...]
+</pre>
+</div>
+
+<p>
+weighted proportionally to the number of adjacencies relative to other
+adjacencies with the same starting word.
+</p>
+
+<p>
+Rather than using a single statement for our corpus, we’ll use the
+entirety of Shakespeare’s sonnets to generate new (nonsense) sonnets
+by taking a random walk on this graph and collecting words along the
+way.
+</p>
+
+<p>
+The process is roughly as follows:
+</p>
+
+<ul class="org-ul">
+<li>Read in the text of Shakespeare’s sonnets and build the stochastic
+matrix for the state machine described above.</li>
+<li>Perform a random walk on this matrix, keeping track of the nodes
+you’ve visited so far.</li>
+<li>Use that list of nodes to generate a list of words which will make
+up the poem. Then format that poem so that it can be nicely printed.</li>
+</ul>
+
+<p>
+You are given starter code in the file <code>hw07.py</code>. Don’t change the
+name of this file when you submit. Also don’t change any of the names
+of functions included in the starter code. The only changes you should
+make are to fill in the <b>TODO</b> items in the starter code. Most of the
+above process in implemented for you. All together you have to fill in
+two functions:
+</p>
+
+<ul class="org-ul">
+<li><code>to_stochastic</code> which converts a list of word pairs into a
+stochastic matrix as described above (<i>Hint.</i> Make sure to look at and
+understand <code>numpy.sum</code>).</li>
+<li><code>random_walk</code> which performs a random walk of a given length and
+returns the list of nodes visited. There is already an
+implementation of a single random step in the function
+<code>random_step</code>. You should use this function and collect the outputs
+into a list.</li>
+</ul>
+
+<p>
+See the docstrings in the starter code for more details.  Once you've
+completed this, you should be able to run your code using <code>python3
+hw07.py</code> and it should print a (unhinged) poem for you:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">from fairest wights, and so thine
+own, in one of my sinful
+then, and suffer dearth, painting thy
+shadow&#8217;s form another; whose worth&#8217;s unknown,
+although their treasure. so oft when
+clouds to trust; enjoy&#8217;d no name,
+blesses an older friend, you most
+precious friends possess&#8217;d, desiring this more.
+then, if thou leave? thy lovers
+gone, save what they see thy
+mind. these poor beauty of nature&#8217;s
+riches from those errors hath her
+pipe in my soul of faults
+should despair, which shall stay. no
+shape so suited, and straight will...
+</pre>
+</div>
+
+<p>
+You will upload a single file <code>hw07.py</code>. You will also be provided
+with a text file <code>sonnets.txt</code> which contains the text of the entirety
+of Shakespeare’s sonnets. You do not need to upload this when you
+submit, you just need to upload <code>hw07.py</code>.
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
