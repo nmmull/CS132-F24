@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-31 Thu 15:09 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Homework 8</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="../../myStyle.css" />
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'left',
+      displayIndent: '2em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'left',
+      displayIndent: '2em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up"><a href="../../material.html">↩</a></div><div id="content" class="content">
+<h1 class="title">Homework 8</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org7b62dd2">1. Column/Null Space</a>
+<ul>
+<li><a href="#orgbf3ccba">1.1. (5 points)</a></li>
+<li><a href="#org3c64e72">1.2. (5 points)</a></li>
+</ul>
+</li>
+<li><a href="#org12613a9">2. Graphics (Programming)</a></li>
+</ul>
+</div>
+</div>
+<p>
+The following assignment is due <b>Thursday 11/07 by 11:59 PM</b>.  You
+should submit all your written solutions to Gradescope as a single
+pdf.  Follow the instructions in the programming problem for code
+solutions.
+</p>
+<ul class="org-ul">
+<li>Your solutions must be <i>exceptionally neat</i> and the final answer in
+your solution to each problem must be <i>abundantly clear</i>, e.g.,
+surrounded in a very visible box.  The graders have license to dock
+points for illegible or unclear solutions.</li>
+<li>For the written part, choose the correct pages corresponding to each
+problem in Gradescope.  Note that Gradescope registers your
+submission as soon as you submit it, so you don't need to rush to
+choose the pages. <b>You will receive no credit if you do not choose
+the correct pages, no exceptions.</b></li>
+</ul>
+<div id="outline-container-org7b62dd2" class="outline-2">
+<h2 id="org7b62dd2"><span class="section-number-2">1.</span> Column/Null Space</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgbf3ccba" class="outline-3">
+<h3 id="orgbf3ccba"><span class="section-number-3">1.1.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Determine bases for the column space and the null space of the
+following matrix. You may use a computer to do any row reductions, but
+you must otherwise show your work.
+</p>
+
+\begin{bmatrix}
+0 & -2 & 2 \\
+-2 & 3 & -9 \\
+-1 & -2 & -1
+\end{bmatrix}
+</div>
+</div>
+
+<div id="outline-container-org3c64e72" class="outline-3">
+<h3 id="org3c64e72"><span class="section-number-3">1.2.</span> (5 points)</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Determine bases for the column space and the null sapce of the
+following matrix.  Write the basis for the column spaces in terms of
+the vectors \(\mathbf a_1, \dots, \mathbf a_8\).
+</p>
+
+\begin{align*}
+[ \mathbf a_1 \ \ \ \mathbf a_2 \ \ \ \mathbf a_3  \ \ \ \mathbf a_4 \ \ \ \mathbf a_5  \ \ \ \mathbf a_6  \ \ \ \mathbf a_7 \ \ \ \mathbf a_8 ]
+\sim
+\begin{bmatrix}
+1 & -15 & 3 & 0 & 0 & 5 & 0 & -7 \\
+0 & 23 & 14 & 0 & 0 & 2 & 0 & 1 \\
+0 & 0  & 0  & 1 & 0 & 3 & 0 & 7 \\
+0 & 0  & 0  & 0 & 1 & 8 & 0 & 9 \\
+0 & 0  & 0  & 0 & 0 & 0 & 1 & 1 \\
+0 & 0  & 0  & 0 & 0 & 0 & 0 & 0 \\
+\end{bmatrix}
+\end{align*}
+</div>
+</div>
+</div>
+<div id="outline-container-org12613a9" class="outline-2">
+<h2 id="org12613a9"><span class="section-number-2">2.</span> Graphics (Programming)</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+(40 points) This week you will be building an interactive matplotlib
+widget which can manipulate 2D renderings of 3D wireframes. Once
+you're done, it should like something like this.
+</p>
+
+
+<div id="orgd7208d9" class="figure">
+<p><img src="demo.png" alt="demo.png" width="800px" />
+</p>
+</div>
+
+
+<p>
+You are given starter code in the file <code>hw08.py</code>. <b><b>Don't change the
+name of this file when you submit.</b></b> Also don't change the names of
+any functions included in the starter code.  <b><b>The only changes you
+should make are to fill in the provided TODO items.</b></b> You are also
+given a separate file called <code>demo.py</code> which contains the code for the
+matplotlib widget.
+</p>
+
+<p>
+At a high-level the code works as follows:
+</p>
+
+<ul class="org-ul">
+<li>3D wireframes are represented of 3D line segments3D, which are
+represented as pairs of 3D points, which are represented as triples
+of floats. <code>shape_to_matrix</code> takes a 3D wireframe with \(n\) line
+segments and converts it into a \(4 \times 2n\) matrix in which each
+column is an endpoint of a line segment in the wireframe in
+<i>homogeneous coordinates</i>.</li>
+
+<li>This matrix of endpoints will be transformed by the matrix returned
+by <code>transform_matrix</code>, which should implement a combination of
+rotation and translation.  See the docstring for details.
+<b>Important:</b> Note that translation should happen <i>after</i> rotation.</li>
+
+<li>2D line segements are represented as pairs of 2D points, which are
+represented as pairs of floats.  The function <code>matrix_to_shape</code>
+should convert a \(4 \times 2n\) matrix into a list of \(n\) 2D line
+segments that will be rendered on the screen.  This is done by
+<ul class="org-ul">
+<li>applying the projection matrix <b><b>with viewing position <code>(0, 0,
+    10)</code></b></b> to the given matrix</li>
+<li>then converting each column from homogeneous coordinates to 2D
+Cartesian coordinates via the transformation discussed in lecture</li>
+<li>then finally grouping every <b>two</b> points to create a list of line
+segments.</li>
+</ul></li>
+
+<li>The above three functions are combined into a single function called
+<code>full_transform</code>. This function should:
+<ul class="org-ul">
+<li>convert the 3D shape to a matrix</li>
+<li>apply the transformation matrix</li>
+<li>convert the matrix to a 2D rendering</li>
+</ul></li>
+</ul>
+
+<p>
+Once you've completed every TODO item, you should be able to run
+<code>python3 demo.py</code> to see the widget in action.
+</p>
+
+<p>
+<b>Extra credit (5 points)</b> For a small amount of extra credit, you can
+ build a wireframe (of some reasonable complexity) in
+ <code>extra_credit_shape</code> which can be viewed in the widget.  In order to
+ get this credit, you must include <b>in the written part of your
+ submission</b> an image of your rendered wireframe, translated and
+ rotated a bit (like in the example image above).  In particular, you
+ have to first complete the required parts of the assignment.  You
+ must also give your shape a name in <code>extra_credit_name</code> (no credit if
+ you picture says "my shape").  Also please state along with your
+ image if you are comfortable making the image public (in case I
+ collect the results on a public facing website).
+</p>
+
+<p>
+You will upload a single file <code>hw08.py</code> to Gradescope, where you can
+verify that it passes some (but not all) autograder tests.  <b><b>Please
+test your system early.</b></b> There may be system dependent issues that
+we'd like to address as early as possible.
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
