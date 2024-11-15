@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-11-14 Thu 15:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Homework 10</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="../../myStyle.css" />
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'left',
+      displayIndent: '2em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'left',
+      displayIndent: '2em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up"><a href="../../material.html">↩</a></div><div id="content" class="content">
+<h1 class="title">Homework 10</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgbfb383e">1. Diagonalization</a>
+<ul>
+<li><a href="#orgeded38f">1.1. (3 points)</a></li>
+<li><a href="#orgff582b1">1.2. (3 points)</a></li>
+<li><a href="#org400c094">1.3. (4 points)</a></li>
+<li><a href="#org86e9b13">1.4. (4 points)</a></li>
+</ul>
+</li>
+<li><a href="#orgc41f694">2. Counterexamples</a>
+<ul>
+<li><a href="#org004cb93">2.1. (3 points)</a></li>
+<li><a href="#orgbf17a1a">2.2. (3 points)</a></li>
+<li><a href="#org821e934">2.3. (4 points)</a></li>
+</ul>
+</li>
+<li><a href="#org840aea0">3. Square Root of a Matrix</a></li>
+<li><a href="#org6c6ac24">4. Extinction (Programming)</a></li>
+</ul>
+</div>
+</div>
+<p>
+The following assignment is due <b>Thursday 11/21 by 11:59 PM</b>.  You
+should submit all your written solutions to Gradescope as a single
+pdf.  Follow the instructions in the programming problem for code
+solutions.
+</p>
+<ul class="org-ul">
+<li>Your solutions must be <i>exceptionally neat</i> and the final answer in
+your solution to each problem must be <i>abundantly clear</i>, e.g.,
+surrounded in a very visible box.  The graders have license to dock
+points for illegible or unclear solutions.</li>
+<li>For the written part, choose the correct pages corresponding to each
+problem in Gradescope.  Note that Gradescope registers your
+submission as soon as you submit it, so you don't need to rush to
+choose the pages. <b>You will receive no credit if you do not choose
+the correct pages, no exceptions.</b></li>
+</ul>
+<div id="outline-container-orgbfb383e" class="outline-2">
+<h2 id="orgbfb383e"><span class="section-number-2">1.</span> Diagonalization</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+For each of the following matrices, determine
+</p>
+<ul class="org-ul">
+<li>its characteristic equation in factored form</li>
+<li>a diagonalization, if possible</li>
+</ul>
+<p>
+If the matrix is diagonalizable, then the diagonalization you give
+should have integer values in \(P\), \(D\) and \(P^{-1}\), and the entries
+in \(D\) should be non-increasing from left to right.  If the matrix is
+not diagonalizable, write <b><b>the matrix is not diagonalizable</b></b> and
+justify your answer.  You must show your work and do all calculations
+by hand.
+</p>
+</div>
+<div id="outline-container-orgeded38f" class="outline-3">
+<h3 id="orgeded38f"><span class="section-number-3">1.1.</span> (3 points)</h3>
+<div class="outline-text-3" id="text-1-1">
+\begin{align*}
+\begin{bmatrix}
+9 & 4 \\
+-14 & -6
+\end{bmatrix}
+\end{align*}
+</div>
+</div>
+<div id="outline-container-orgff582b1" class="outline-3">
+<h3 id="orgff582b1"><span class="section-number-3">1.2.</span> (3 points)</h3>
+<div class="outline-text-3" id="text-1-2">
+\begin{align*}
+\begin{bmatrix}
+-6 & -7\\
+7 & 8
+\end{bmatrix}
+\end{align*}
+</div>
+</div>
+
+<div id="outline-container-org400c094" class="outline-3">
+<h3 id="org400c094"><span class="section-number-3">1.3.</span> (4 points)</h3>
+<div class="outline-text-3" id="text-1-3">
+\begin{align*}
+\begin{bmatrix}
+2 & 0 & 0 & 0 \\
+-1 & 3 & 0 & 0 \\
+3 & -3 & 2 & 0 \\
+-3 & 18 & -6 & -1
+\end{bmatrix}
+\end{align*}
+</div>
+</div>
+
+<div id="outline-container-org86e9b13" class="outline-3">
+<h3 id="org86e9b13"><span class="section-number-3">1.4.</span> (4 points)</h3>
+<div class="outline-text-3" id="text-1-4">
+\begin{align*}
+\begin{bmatrix}
+-1 & -3 & 0 \\
+2 & 4 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\end{align*}
+
+<p>
+Please only use tools that we have discussed in this course.  This
+means you can use the equation for determinants of \(3 \times 3\)
+matrices or you can use row reductions.<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc41f694" class="outline-2">
+<h2 id="orgc41f694"><span class="section-number-2">2.</span> Counterexamples</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+For each of the following statements, find a counterexample by giving
+explicit \(2 \times 2\) matrices \(A\) and \(B\) which falsify the
+statement.  Justify your answer.
+</p>
+</div>
+
+<div id="outline-container-org004cb93" class="outline-3">
+<h3 id="org004cb93"><span class="section-number-3">2.1.</span> (3 points)</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+For any matrices \(A\) and \(B\) \(\det(A + B) = \det(A) + \det(B)\).
+</p>
+</div>
+</div>
+<div id="outline-container-orgbf17a1a" class="outline-3">
+<h3 id="orgbf17a1a"><span class="section-number-3">2.2.</span> (3 points)</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+For any matrix \(A\), if \(\det(A - \lambda I) = (\lambda - 1)^2\), then
+\(\dim(\mathsf{Nul}(A - I)) = 2\).
+</p>
+</div>
+</div>
+<div id="outline-container-org821e934" class="outline-3">
+<h3 id="org821e934"><span class="section-number-3">2.3.</span> (4 points)</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+For any matrices \(A\) and \(B\), if \(\det(A - \lambda I) = \det(B - \lambda I)\), then \(A\) is similar to
+\(B\). <b>Hint:</b> If \(A\) is diagonalizable and \(A\) is similar to \(B\) then
+\(B\) is also diagonalizable.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org840aea0" class="outline-2">
+<h2 id="org840aea0"><span class="section-number-2">3.</span> Square Root of a Matrix</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+(5 points) Consider the matrix
+</p>
+
+\begin{align*}
+A =
+\begin{bmatrix}
+103 & -8 & -47 \\
+24 & 1 & -12 \\
+198 & -16 & -90
+\end{bmatrix}
+\end{align*}
+
+<p>
+Determine a matrix \(B\) such that \(B^2 = A\). <b>Hint.</b> \(A\) is
+diagonalizable.  You can use can use a computer to find eigenvectors
+(e.g., <code>np.linalg.eig</code>) or to reduce matrices, but you must otherwise
+show your work.  Justify your answer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6c6ac24" class="outline-2">
+<h2 id="org6c6ac24"><span class="section-number-2">4.</span> Extinction (Programming)</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+(16 points) Suppose you're working as a wildlife biologist and you've
+recently discovered a new species of seabird living on a remote island
+in the Aegean Sea (congratulations).  You've been gathering data on
+the survival rates of these birds and have determined the following.
+</p>
+
+<ul class="org-ul">
+<li><code>X</code> percent of CHICKs survive to become ADOLESCENT birds each year</li>
+<li><code>Y</code> percent of ADOLESCENT birds survive to become ADULT birds each year</li>
+<li>ADOLESCENT birds do not lay any eggs</li>
+<li><code>Z</code> percent of ADULT birds survive each year</li>
+<li>ADULT birds succeed in hatching <code>N</code> CHICKs per <b>pair</b> of ADULT birds
+each year</li>
+</ul>
+
+<p>
+This situation can be described as a linear dynamical system.  From
+this information you're interested in the conditions under which this
+species of bird is expected to go extinct.  Assuming this
+(over-)simplified system, <b>it suffices to check if the largest
+eigenvalue of the underlying matrix is less than 1</b> (make sure you
+understand why this is the case). In this problem, you will be writing
+several functions to gauge how the above parameters affect the
+possible extinction of this species of seabirds.
+</p>
+
+<p>
+You are given starter code in the file <code>hw10.py</code>. <b>Don't change the
+name of this file when you submit.</b> Also don't change the names of any
+functions included in the starter code. The only changes you should
+make are to fill in the provided <code>TODO</code> items.  You are required to
+implement the following functions.
+</p>
+
+<ul class="org-ul">
+<li><code>survival_matrix</code>, which defines the evolution matrix for the above
+situation</li>
+<li><code>min_non_extinct_rate_chicks</code>, which determines the smallest
+survival rate of chicks required to ensure non-extinction of the
+species</li>
+<li><code>min_non_extinct_rate</code>, which determines the smallest survival rate
+of adolescents and adults for which non-extinction is <i>possible</i></li>
+<li><code>years_until_extinct</code>, which determines the number of years it will
+take for a particular population to go extinct (and <code>None</code> if the
+species is not expected to go extinct)</li>
+</ul>
+
+<p>
+See the docstrings in the starter code for more details.  You'll
+upload a single file <code>hw10.py</code> to Gradescope, where you can verify that
+it passes some (but not all) autograder tests.
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">But you cannot, for
+example, use any definition of determinants that depends on
+cofactors.</p></div></div>
+
+
+</div>
+</div></div>
+</body>
+</html>
