@@ -98,7 +98,7 @@ def min_non_extinct_rate(num_eggs):
       >>> min_non_extinct_rate(2)
       51
       >>> min_non_extinct_rate(3)
-      41
+      40
 
     """
     return None # TODO
