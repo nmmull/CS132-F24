@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-12-05 Thu 23:43 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Homework 12</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="../../myStyle.css" />
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'left',
+      displayIndent: '2em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'left',
+      displayIndent: '2em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up"><a href="../../material.html">↩</a></div><div id="content" class="content">
+<h1 class="title">Homework 12</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgc6a07ee">1. Least Squares</a>
+<ul>
+<li><a href="#orgaacf37b">1.1. (2 points)</a></li>
+<li><a href="#orgf164022">1.2. (2 points)</a></li>
+<li><a href="#org99be4ac">1.3. (1 points)</a></li>
+</ul>
+</li>
+<li><a href="#orgd495920">2. Linear Models</a>
+<ul>
+<li><a href="#orgbb2f66d">2.1. (2 points)</a></li>
+<li><a href="#org2bc12ae">2.2. (2 points)</a></li>
+</ul>
+</li>
+<li><a href="#org7984b3c">3. Quadratic Forms</a>
+<ul>
+<li><a href="#orgcdc6662">3.1. (2 points)</a></li>
+<li><a href="#org2a5dc7d">3.2. (2 points)</a></li>
+<li><a href="#orgd6c8852">3.3. (2 points)</a></li>
+</ul>
+</li>
+<li><a href="#org7dcfea4">4. SVD (Extra Credit)</a>
+<ul>
+<li><a href="#org914f318">4.1. (1 point)</a></li>
+<li><a href="#org9535f2d">4.2. (1 point)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+The following assignment is due <b>Thursday 12/10 by 11:59 PM</b>.  You
+should submit all your written solutions to Gradescope as a single
+pdf.  Follow the instructions in the programming problem for code
+solutions.
+</p>
+<ul class="org-ul">
+<li>Your solutions must be <i>exceptionally neat</i> and the final answer in
+your solution to each problem must be <i>abundantly clear</i>, e.g.,
+surrounded in a very visible box.  The graders have license to dock
+points for illegible or unclear solutions.</li>
+<li>For the written part, choose the correct pages corresponding to each
+problem in Gradescope.  Note that Gradescope registers your
+submission as soon as you submit it, so you don't need to rush to
+choose the pages. <b>You will receive no credit if you do not choose
+the correct pages, no exceptions.</b></li>
+</ul>
+<div id="outline-container-orgc6a07ee" class="outline-2">
+<h2 id="orgc6a07ee"><span class="section-number-2">1.</span> Least Squares</h2>
+<div class="outline-text-2" id="text-1">
+\begin{align*}
+A =
+\begin{bmatrix}
+1 & 2 \\
+1 & -1 \\
+1 & -1 \\
+\end{bmatrix}
+\qquad
+\mathbf v =
+\begin{bmatrix}
+4 \\ 2 \\ 0
+\end{bmatrix}
+\end{align*}
+<p>
+For this problem, you must do all calculations by hand and show your work.
+</p>
+</div>
+<div id="outline-container-orgaacf37b" class="outline-3">
+<h3 id="orgaacf37b"><span class="section-number-3">1.1.</span> (2 points)</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Determine the normal equations of \(A\mathbf x = \mathbf b\).
+</p>
+</div>
+</div>
+<div id="outline-container-orgf164022" class="outline-3">
+<h3 id="orgf164022"><span class="section-number-3">1.2.</span> (2 points)</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Determine a least-squares solution of \(A \mathbf x = \mathbf b\).
+</p>
+</div>
+</div>
+<div id="outline-container-org99be4ac" class="outline-3">
+<h3 id="org99be4ac"><span class="section-number-3">1.3.</span> (1 points)</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Is the least-squares solution you determined in the previous part unique? Justify your answer.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd495920" class="outline-2">
+<h2 id="orgd495920"><span class="section-number-2">2.</span> Linear Models</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+We will use the following dataset for this problem.
+</p>
+
+\begin{align*}
+\{(-2, 0), (-1, 5), (0, 13), (1, 9), (2, 5), (3, 0)\}
+\end{align*}
+</div>
+
+<div id="outline-container-orgbb2f66d" class="outline-3">
+<h3 id="orgbb2f66d"><span class="section-number-3">2.1.</span> (2 points)</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Set up a linear system whose least-squares solution determines the
+parameters for the least-squares fit model of the form \(f(x) = \beta_1
+\cos x + \beta_2 \sin x + \beta_3 x + \beta_4\) (in other words,
+determine the design matrix and the vector of labels for the given
+data and model).  Round the entries of the design matrix to the
+nearest hundredth.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org2bc12ae" class="outline-3">
+<h3 id="org2bc12ae"><span class="section-number-3">2.2.</span> (2 points)</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Determine the least-squares fit model for the given data.  Round the
+parameters to the nearest hundredth.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7984b3c" class="outline-2">
+<h2 id="org7984b3c"><span class="section-number-2">3.</span> Quadratic Forms</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Consider the following quadratic form.
+</p>
+
+\begin{align*}
+3x_1^2 + 3x_2^2 + 5x_3^2 + 6x_1 x_2 + 2x_1 x_3 + 2x_2 x_3
+\end{align*}
+</div>
+
+<div id="outline-container-orgcdc6662" class="outline-3">
+<h3 id="orgcdc6662"><span class="section-number-3">3.1.</span> (2 points)</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Determine the underlying matrix for \(A\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2a5dc7d" class="outline-3">
+<h3 id="org2a5dc7d"><span class="section-number-3">3.2.</span> (2 points)</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Determine \(\mathsf{max}_{\|\mathbf x\| = 1} \mathbf x^TA\mathbf x\),
+that is the maximum value of \(\mathbf x^TA\mathbf x\).  You may use a computer for this
+part, but you must describe your process and justify your answer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd6c8852" class="outline-3">
+<h3 id="orgd6c8852"><span class="section-number-3">3.3.</span> (2 points)</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Determine \(\mathsf{argmax}_{\|\mathbf x\| = 1} \mathbf x^TA\mathbf x\),
+that is unit vector which attains the maximum value.  For this part,
+you must do calculations by hand and show your work.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org7dcfea4" class="outline-2">
+<h2 id="org7dcfea4"><span class="section-number-2">4.</span> SVD (Extra Credit)</h2>
+<div class="outline-text-2" id="text-4">
+\begin{align*}
+A =
+\begin{bmatrix}
+3 & 2 \\
+2 & 3 \\
+2 & -2
+\end{bmatrix}
+\end{align*}
+</div>
+<div id="outline-container-org914f318" class="outline-3">
+<h3 id="org914f318"><span class="section-number-3">4.1.</span> (1 point)</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Determine a singular value decomposition of \(A\). For this part, you
+must do calculations by hand and show your work.
+</p>
+</div>
+</div>
+<div id="outline-container-org9535f2d" class="outline-3">
+<h3 id="org9535f2d"><span class="section-number-3">4.2.</span> (1 point)</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Determine a singular value decomposition of \(A^T\). (<b>Hint.</b> Don't do
+all the work again)
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
