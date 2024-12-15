@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-12-09 Mon 10:57 -->
+<!-- 2024-12-15 Sun 17:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Final Exam Topics</title>
@@ -50,31 +50,31 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgb02c248">Systems of linear equations</a></li>
-<li><a href="#org28ffe3d">Gaussian elimination</a></li>
-<li><a href="#orgf85cc95">Vector equations</a></li>
-<li><a href="#org619ccf1">Ax = b</a></li>
-<li><a href="#org5d12f44">Linear independence</a></li>
-<li><a href="#org5be95ba">Linear transforms</a></li>
-<li><a href="#org893e6b9">Matrix of a transformation</a></li>
-<li><a href="#orgabade69">Matrix algebra</a></li>
-<li><a href="#orgad34f1f">Matrix inverses</a></li>
-<li><a href="#orgf94a64f">The invertible matrix theorem</a></li>
-<li><a href="#org71a909a">Markov chains</a></li>
-<li><a href="#org19c4ed9">Matrix factorization</a></li>
-<li><a href="#orgf32ee9b">Computer graphics</a></li>
-<li><a href="#orgb8be248">Subspaces</a></li>
-<li><a href="#org12d5a19">Dimension and rank</a></li>
-<li><a href="#org8fecd6d">Eigenvectors and eigenvalues</a></li>
-<li><a href="#org24574fe">The characteristic equation</a></li>
-<li><a href="#orgf778537">Diagonalizability</a></li>
-<li><a href="#org3434fec">PageRank</a></li>
-<li><a href="#orga9755dc">Analytic geometry</a></li>
-<li><a href="#orge51bbfb">Orthogonal projection</a></li>
-<li><a href="#org7e7001a">Least squares</a></li>
-<li><a href="#org108fff4">Linear models</a></li>
-<li><a href="#orgdd1c608">Symmetric matrices</a></li>
-<li><a href="#org9969931">Singular value decomposition</a></li>
+<li><a href="#orgbc2d56d">Systems of linear equations</a></li>
+<li><a href="#org272a31e">Gaussian elimination</a></li>
+<li><a href="#org1e87871">Vector equations</a></li>
+<li><a href="#orgb417ad5">Ax = b</a></li>
+<li><a href="#orgb050f7e">Linear independence</a></li>
+<li><a href="#org8b182ab">Linear transforms</a></li>
+<li><a href="#orge59fbae">Matrix of a transformation</a></li>
+<li><a href="#orgb61fbed">Matrix algebra</a></li>
+<li><a href="#orgfaed484">Matrix inverses</a></li>
+<li><a href="#org2d760e2">The invertible matrix theorem</a></li>
+<li><a href="#orgfa98bed">Markov chains</a></li>
+<li><a href="#org9caaf71">Matrix factorization</a></li>
+<li><a href="#org86e368c">Computer graphics</a></li>
+<li><a href="#org6c3bd74">Subspaces</a></li>
+<li><a href="#org5b8c2dc">Dimension and rank</a></li>
+<li><a href="#orgc4ae8b8">Eigenvectors and eigenvalues</a></li>
+<li><a href="#org3924a0f">The characteristic equation</a></li>
+<li><a href="#org30d6a09">Diagonalizability</a></li>
+<li><a href="#orgd2109bd">PageRank</a></li>
+<li><a href="#orgad264ae">Analytic geometry</a></li>
+<li><a href="#orgcfde3b3">Orthogonal projection</a></li>
+<li><a href="#org6a2191c">Least squares</a></li>
+<li><a href="#orgd5c348f">Linear models</a></li>
+<li><a href="#org43b8af7">Symmetric matrices</a></li>
+<li><a href="#org92c2633">Singular value decomposition</a></li>
 </ul>
 </div>
 </div>
@@ -84,419 +84,419 @@ speaking, anything in our <a href="http://mcrovella.github.io/CS132-Geometric-Al
 guaranteed to be exhaustive.  The primary aim of this list is to
 point out a couple topics that will <i>not</i> appear on the final.
 </p>
-<div id="outline-container-orgb02c248" class="outline-2">
-<h2 id="orgb02c248">Systems of linear equations</h2>
-<div class="outline-text-2" id="text-orgb02c248">
+<div id="outline-container-orgbc2d56d" class="outline-2">
+<h2 id="orgbc2d56d">Systems of linear equations</h2>
+<div class="outline-text-2" id="text-orgbc2d56d">
 </div>
 <ul class="org-ul">
-<li><a id="orgcde5b85"></a>Counting solutions<br />
+<li><a id="orga917676"></a>Counting solutions<br />
 <ul class="org-ul">
-<li><a id="org85a8c9f"></a>Consistency<br /></li>
-<li><a id="org8226c2e"></a>Uniqueness<br /></li>
-<li><a id="orgbad512b"></a>Infinite solutions<br /></li>
+<li><a id="org50fa117"></a>Consistency<br /></li>
+<li><a id="org5d024da"></a>Uniqueness<br /></li>
+<li><a id="orga6fe937"></a>Infinite solutions<br /></li>
 </ul>
 </li>
-<li><a id="org5d67d52"></a>Coefficient matrices<br /></li>
-<li><a id="org3f0bfe9"></a>Augmented matrices<br /></li>
-<li><a id="org1f31674"></a>Finding solutions<br />
+<li><a id="org5b612aa"></a>Coefficient matrices<br /></li>
+<li><a id="org20eb574"></a>Augmented matrices<br /></li>
+<li><a id="orgcf05730"></a>Finding solutions<br />
 <ul class="org-ul">
-<li><a id="org88fc8ca"></a>Elimination<br /></li>
-<li><a id="org418a12e"></a>Back substitution<br /></li>
+<li><a id="orgc287ee5"></a>Elimination<br /></li>
+<li><a id="org973e468"></a>Back substitution<br /></li>
 </ul>
 </li>
-<li><a id="org80f5706"></a>Verifying solutions<br /></li>
-<li><a id="orgbfec22d"></a>Elementary row operations<br />
+<li><a id="orga35ba69"></a>Verifying solutions<br /></li>
+<li><a id="orgdd77859"></a>Elementary row operations<br />
 <ul class="org-ul">
-<li><a id="org86b1602"></a>Replacement<br /></li>
-<li><a id="orge32118c"></a>Interchange<br /></li>
-<li><a id="org14df3bf"></a>Scaling<br /></li>
+<li><a id="org7dfa532"></a>Replacement<br /></li>
+<li><a id="org65d669b"></a>Interchange<br /></li>
+<li><a id="orgcbf7208"></a>Scaling<br /></li>
 </ul>
 </li>
-<li><a id="org85dd30b"></a>Row Equivalence<br /></li>
+<li><a id="org0cc4a63"></a>Row Equivalence<br /></li>
 </ul>
 </div>
-<div id="outline-container-org28ffe3d" class="outline-2">
-<h2 id="org28ffe3d">Gaussian elimination</h2>
-<div class="outline-text-2" id="text-org28ffe3d">
+<div id="outline-container-org272a31e" class="outline-2">
+<h2 id="org272a31e">Gaussian elimination</h2>
+<div class="outline-text-2" id="text-org272a31e">
 </div>
 <ul class="org-ul">
-<li><a id="orgb07f17b"></a>Echelon forms<br /></li>
-<li><a id="orgc1b4be5"></a>Reduced echelon forms<br /></li>
-<li><a id="orga423536"></a>Pivot positions and pivot rows<br /></li>
-<li><a id="orgc088a54"></a>Performing Gaussian elimination<br />
+<li><a id="org7fdfbb5"></a>Echelon forms<br /></li>
+<li><a id="orgf151862"></a>Reduced echelon forms<br /></li>
+<li><a id="org63b32fe"></a>Pivot positions and pivot rows<br /></li>
+<li><a id="org8d213fb"></a>Performing Gaussian elimination<br />
 <ul class="org-ul">
-<li><a id="org9e6d722"></a>Elimination<br /></li>
-<li><a id="org4cdc877"></a>Back substitution<br /></li>
+<li><a id="org35784b6"></a>Elimination<br /></li>
+<li><a id="orgc1cb36d"></a>Back substitution<br /></li>
 </ul>
 </li>
-<li><a id="orgd55af45"></a>Interpreting echelon forms<br />
+<li><a id="orgdb02402"></a>Interpreting echelon forms<br />
 <ul class="org-ul">
-<li><a id="org12f6038"></a>Basic variables<br /></li>
-<li><a id="org844e3ca"></a>Free variables<br /></li>
-<li><a id="orgb9b6e1d"></a>General-form solutions<br /></li>
+<li><a id="org3786191"></a>Basic variables<br /></li>
+<li><a id="orgf41b344"></a>Free variables<br /></li>
+<li><a id="org9dae62d"></a>General-form solutions<br /></li>
 </ul>
 </li>
-<li><a id="orga149d07"></a><b>EXCLUDING</b>: FLOP counts<br /></li>
+<li><a id="orgef4ec92"></a><b>EXCLUDING</b>: FLOP counts<br /></li>
 </ul>
 </div>
-<div id="outline-container-orgf85cc95" class="outline-2">
-<h2 id="orgf85cc95">Vector equations</h2>
-<div class="outline-text-2" id="text-orgf85cc95">
+<div id="outline-container-org1e87871" class="outline-2">
+<h2 id="org1e87871">Vector equations</h2>
+<div class="outline-text-2" id="text-org1e87871">
 </div>
 <ul class="org-ul">
-<li><a id="org6bde2d9"></a>(Column) vectors<br /></li>
-<li><a id="orge45e222"></a>Vector operations<br />
+<li><a id="org000b839"></a>(Column) vectors<br /></li>
+<li><a id="orgc3b1a9f"></a>Vector operations<br />
 <ul class="org-ul">
-<li><a id="orgb6acbc3"></a>Addition<br />
+<li><a id="orgca6678b"></a>Addition<br />
 <ul class="org-ul">
-<li><a id="org575407d"></a>Parallelogram rule<br /></li>
-<li><a id="org20c9a4c"></a>Tip-to-tail rule<br /></li>
+<li><a id="org344fdb9"></a>Parallelogram rule<br /></li>
+<li><a id="org0fa2186"></a>Tip-to-tail rule<br /></li>
 </ul>
 </li>
-<li><a id="org1122061"></a>Multiplication<br /></li>
-<li><a id="org7adeb12"></a>Scaling<br /></li>
-<li><a id="org103b708"></a>Algebraic properties<br /></li>
+<li><a id="org5fb79cb"></a>Multiplication<br /></li>
+<li><a id="org1462bd4"></a>Scaling<br /></li>
+<li><a id="org8175932"></a>Algebraic properties<br /></li>
 </ul>
 </li>
-<li><a id="orgf08f887"></a>Linear combinations<br /></li>
-<li><a id="org25454af"></a>Vector equations<br />
+<li><a id="orgc99ad2d"></a>Linear combinations<br /></li>
+<li><a id="org79359ab"></a>Vector equations<br />
 <ul class="org-ul">
-<li><a id="org3065f29"></a>Equivalence with systems of linear equations<br /></li>
+<li><a id="org4369882"></a>Equivalence with systems of linear equations<br /></li>
 </ul>
 </li>
-<li><a id="orgb5efa83"></a>Span<br /></li>
+<li><a id="orga996fda"></a>Span<br /></li>
 </ul>
 </div>
-<div id="outline-container-org619ccf1" class="outline-2">
-<h2 id="org619ccf1">Ax = b</h2>
-<div class="outline-text-2" id="text-org619ccf1">
+<div id="outline-container-orgb417ad5" class="outline-2">
+<h2 id="orgb417ad5">Ax = b</h2>
+<div class="outline-text-2" id="text-orgb417ad5">
 </div>
 <ul class="org-ul">
-<li><a id="org827fce5"></a>Matrix-vector multiplication<br />
+<li><a id="org28742b0"></a>Matrix-vector multiplication<br />
 <ul class="org-ul">
-<li><a id="org5a12efa"></a>Algebraic properties<br />
+<li><a id="orge15935d"></a>Algebraic properties<br />
 <ul class="org-ul">
-<li><a id="org386f18e"></a>Additivity<br /></li>
-<li><a id="org2b50987"></a>Homogeneity<br /></li>
+<li><a id="orga54e1cc"></a>Additivity<br /></li>
+<li><a id="org295893e"></a>Homogeneity<br /></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a id="org245d878"></a>The matrix equation<br />
+<li><a id="orga4c3d42"></a>The matrix equation<br />
 <ul class="org-ul">
-<li><a id="orgd63ba3e"></a>Equivalence with systems of linear equations<br /></li>
+<li><a id="org16842ae"></a>Equivalence with systems of linear equations<br /></li>
 </ul>
 </li>
-<li><a id="orgd2ea9f7"></a>Inner products<br /></li>
-<li><a id="org7d4e0b5"></a>The identity matrix<br /></li>
+<li><a id="orgf6a7c0f"></a>Inner products<br /></li>
+<li><a id="org700305a"></a>The identity matrix<br /></li>
 </ul>
 </div>
-<div id="outline-container-org5d12f44" class="outline-2">
-<h2 id="org5d12f44">Linear independence</h2>
-<div class="outline-text-2" id="text-org5d12f44">
+<div id="outline-container-orgb050f7e" class="outline-2">
+<h2 id="orgb050f7e">Linear independence</h2>
+<div class="outline-text-2" id="text-orgb050f7e">
 </div>
 <ul class="org-ul">
-<li><a id="orgc43aa5a"></a>Linear dependence<br /></li>
-<li><a id="org2891ebc"></a>Spanning sets<br /></li>
-<li><a id="orgd991fc2"></a><b>EXCLUDING</b>: Network flow<br /></li>
+<li><a id="orge99b660"></a>Linear dependence<br /></li>
+<li><a id="org7293f13"></a>Spanning sets<br /></li>
+<li><a id="org6415e97"></a><b>EXCLUDING</b>: Network flow<br /></li>
 </ul>
 </div>
-<div id="outline-container-org5be95ba" class="outline-2">
-<h2 id="org5be95ba">Linear transforms</h2>
-<div class="outline-text-2" id="text-org5be95ba">
+<div id="outline-container-org8b182ab" class="outline-2">
+<h2 id="org8b182ab">Linear transforms</h2>
+<div class="outline-text-2" id="text-org8b182ab">
 </div>
 <ul class="org-ul">
-<li><a id="orga36f199"></a>Definitions<br />
+<li><a id="org1b1bb70"></a>Definitions<br />
 <ul class="org-ul">
-<li><a id="org4f8b297"></a>Domain<br /></li>
-<li><a id="orga969cf9"></a>Codomain<br /></li>
-<li><a id="org9e97507"></a>Image<br /></li>
-<li><a id="org947bc91"></a>Range<br /></li>
+<li><a id="orga5319d4"></a>Domain<br /></li>
+<li><a id="org26dabed"></a>Codomain<br /></li>
+<li><a id="org09cf3ba"></a>Image<br /></li>
+<li><a id="orga98bda6"></a>Range<br /></li>
 </ul>
 </li>
-<li><a id="orgf3c02bb"></a>Linearity<br /></li>
-<li><a id="orgd358821"></a>Algebraic properties (of Linear Transformations)<br /></li>
-<li><a id="org93a048e"></a>Simple linear transformations<br />
+<li><a id="org5e10903"></a>Linearity<br /></li>
+<li><a id="org0e26b34"></a>Algebraic properties (of Linear Transformations)<br /></li>
+<li><a id="orge4ab3c5"></a>Simple linear transformations<br />
 <ul class="org-ul">
-<li><a id="org42163fe"></a>Shearing<br /></li>
-<li><a id="org846a54c"></a>Contraction<br /></li>
-<li><a id="org794d950"></a>Dilation<br /></li>
-<li><a id="org7d050d2"></a>Rotation<br /></li>
-<li><a id="org1674b18"></a>Reflection<br /></li>
-<li><a id="orgbe2f510"></a>Projection<br /></li>
+<li><a id="org4536a58"></a>Shearing<br /></li>
+<li><a id="org32e79ef"></a>Contraction<br /></li>
+<li><a id="orgbf36fa8"></a>Dilation<br /></li>
+<li><a id="org1e11fa1"></a>Rotation<br /></li>
+<li><a id="org36d43f9"></a>Reflection<br /></li>
+<li><a id="org1ba3499"></a>Projection<br /></li>
 </ul>
 </li>
-<li><a id="org0c01d36"></a>Simple non-linear transformations<br />
+<li><a id="orgeabd045"></a>Simple non-linear transformations<br />
 <ul class="org-ul">
-<li><a id="org4f28de8"></a>Translation<br /></li>
+<li><a id="org3dcb3f6"></a>Translation<br /></li>
 </ul>
 </li>
-<li><a id="orgc8624ae"></a>Non-geometric word problems<br />
+<li><a id="orgc0e94df"></a>Non-geometric word problems<br />
 <ul class="org-ul">
-<li><a id="org5bea99e"></a>Manufacturing example<br /></li>
-</ul>
-</li>
-</ul>
-</div>
-<div id="outline-container-org893e6b9" class="outline-2">
-<h2 id="org893e6b9">Matrix of a transformation</h2>
-<div class="outline-text-2" id="text-org893e6b9">
-</div>
-<ul class="org-ul">
-<li><a id="orgedbcc77"></a>Finding the matrix implementing a linear transformation<br /></li>
-<li><a id="orgfa64f31"></a>Kinds of linear transformations<br />
-<ul class="org-ul">
-<li><a id="org3647516"></a>One-to-one<br /></li>
-<li><a id="org2e4a26d"></a>Onto<br /></li>
-</ul>
-</li>
-<li><a id="org43fc061"></a>2 × 2 Determinants<br />
-<ul class="org-ul">
-<li><a id="orgbbfbd1c"></a><b>EXCLUDING</b>: Relationship with area<br /></li>
+<li><a id="org1b8aaf6"></a>Manufacturing example<br /></li>
 </ul>
 </li>
 </ul>
 </div>
-<div id="outline-container-orgabade69" class="outline-2">
-<h2 id="orgabade69">Matrix algebra</h2>
-<div class="outline-text-2" id="text-orgabade69">
+<div id="outline-container-orge59fbae" class="outline-2">
+<h2 id="orge59fbae">Matrix of a transformation</h2>
+<div class="outline-text-2" id="text-orge59fbae">
 </div>
 <ul class="org-ul">
-<li><a id="org42c7ca2"></a>Matrix Operations<br />
+<li><a id="org1c30ea8"></a>Finding the matrix implementing a linear transformation<br /></li>
+<li><a id="orgf6db60a"></a>Kinds of linear transformations<br />
 <ul class="org-ul">
-<li><a id="org59375fa"></a>Addition<br /></li>
-<li><a id="org8d16e37"></a>Multiplication<br />
-<ul class="org-ul">
-<li><a id="org5f4cab3"></a>Relation to composition<br /></li>
+<li><a id="org97dacb0"></a>One-to-one<br /></li>
+<li><a id="orgd38327b"></a>Onto<br /></li>
 </ul>
 </li>
-<li><a id="orgbca3eea"></a>Scaling<br /></li>
-<li><a id="orgbdacaa8"></a>Algebraic properties<br />
+<li><a id="org0400650"></a>2 × 2 Determinants<br />
 <ul class="org-ul">
-<li><a id="org1492a02"></a>Matrix multiplication is not commutative<br /></li>
-</ul>
-</li>
-<li><a id="orgec49f7e"></a>Powers<br /></li>
-<li><a id="org009a411"></a>Transposition<br /></li>
-</ul>
-</li>
-<li><a id="org20c820c"></a>Inner product<br /></li>
-<li><a id="org7a923b0"></a><b>EXCLUDING</b>: Computational viewpoint<br /></li>
-</ul>
-</div>
-<div id="outline-container-orgad34f1f" class="outline-2">
-<h2 id="orgad34f1f">Matrix inverses</h2>
-<div class="outline-text-2" id="text-orgad34f1f">
-</div>
-<ul class="org-ul">
-<li><a id="org7d27cc7"></a>Invertibility<br /></li>
-<li><a id="orgea33fa9"></a>Singular vs. non-singular matrices<br /></li>
-<li><a id="org32d7973"></a>Determinants<br /></li>
-<li><a id="orgd2dacdf"></a>Equivalence to solving systems of linear equations<br /></li>
-<li><a id="orgff904b6"></a><b>EXCLUDING</b>:<br />
-<ul class="org-ul">
-<li><a id="org462f9c3"></a>Computational view<br /></li>
-<li><a id="orgcd84790"></a>Ill-conditioned matrices<br /></li>
+<li><a id="org32bcac9"></a><b>EXCLUDING</b>: Relationship with area<br /></li>
 </ul>
 </li>
 </ul>
 </div>
-<div id="outline-container-orgf94a64f" class="outline-2">
-<h2 id="orgf94a64f">The invertible matrix theorem</h2>
-</div>
-<div id="outline-container-org71a909a" class="outline-2">
-<h2 id="org71a909a">Markov chains</h2>
-<div class="outline-text-2" id="text-org71a909a">
+<div id="outline-container-orgb61fbed" class="outline-2">
+<h2 id="orgb61fbed">Matrix algebra</h2>
+<div class="outline-text-2" id="text-orgb61fbed">
 </div>
 <ul class="org-ul">
-<li><a id="org655f32d"></a>Linear dynamical systems/linear difference equations<br /></li>
-<li><a id="org025b820"></a>Probability vectors<br /></li>
-<li><a id="org7b712e9"></a>Stochastic matrices<br /></li>
-<li><a id="org8927d79"></a>Steady-states<br /></li>
-<li><a id="orgb493eae"></a>Convergence to steady states<br /></li>
+<li><a id="org5b226f1"></a>Matrix Operations<br />
+<ul class="org-ul">
+<li><a id="org80919ac"></a>Addition<br /></li>
+<li><a id="orgf4ada31"></a>Multiplication<br />
+<ul class="org-ul">
+<li><a id="orgb0f6172"></a>Relation to composition<br /></li>
+</ul>
+</li>
+<li><a id="org1e39800"></a>Scaling<br /></li>
+<li><a id="org23b2700"></a>Algebraic properties<br />
+<ul class="org-ul">
+<li><a id="org0b4c5b2"></a>Matrix multiplication is not commutative<br /></li>
+</ul>
+</li>
+<li><a id="org4558772"></a>Powers<br /></li>
+<li><a id="org2c6278d"></a>Transposition<br /></li>
+</ul>
+</li>
+<li><a id="org7001e5f"></a>Inner product<br /></li>
+<li><a id="org4a13ac5"></a><b>EXCLUDING</b>: Computational viewpoint<br /></li>
 </ul>
 </div>
-<div id="outline-container-org19c4ed9" class="outline-2">
-<h2 id="org19c4ed9">Matrix factorization</h2>
-<div class="outline-text-2" id="text-org19c4ed9">
+<div id="outline-container-orgfaed484" class="outline-2">
+<h2 id="orgfaed484">Matrix inverses</h2>
+<div class="outline-text-2" id="text-orgfaed484">
 </div>
 <ul class="org-ul">
-<li><a id="org3a64946"></a>LU factorization<br /></li>
-<li><a id="orge5241e0"></a>Elementary matrices<br /></li>
-<li><a id="org305e454"></a><b>EXCLUDING</b>:<br />
+<li><a id="org34150ff"></a>Invertibility<br /></li>
+<li><a id="org815c53e"></a>Singular vs. non-singular matrices<br /></li>
+<li><a id="org6bce1df"></a>Determinants<br /></li>
+<li><a id="orgf606b93"></a>Equivalence to solving systems of linear equations<br /></li>
+<li><a id="org9df6cb6"></a><b>EXCLUDING</b>:<br />
 <ul class="org-ul">
-<li><a id="orgcbd8b5f"></a>Forward substitution<br /></li>
-<li><a id="org01afdd0"></a>FLOP counts<br /></li>
-<li><a id="org01a248c"></a>Pivoting<br /></li>
+<li><a id="org527a998"></a>Computational view<br /></li>
+<li><a id="orgf1b2061"></a>Ill-conditioned matrices<br /></li>
 </ul>
 </li>
 </ul>
 </div>
-<div id="outline-container-orgf32ee9b" class="outline-2">
-<h2 id="orgf32ee9b">Computer graphics</h2>
-<div class="outline-text-2" id="text-orgf32ee9b">
+<div id="outline-container-org2d760e2" class="outline-2">
+<h2 id="org2d760e2">The invertible matrix theorem</h2>
+</div>
+<div id="outline-container-orgfa98bed" class="outline-2">
+<h2 id="orgfa98bed">Markov chains</h2>
+<div class="outline-text-2" id="text-orgfa98bed">
 </div>
 <ul class="org-ul">
-<li><a id="org260a9db"></a>Homogeneous coordinates<br /></li>
-<li><a id="orgae8036f"></a>Rotation matrices<br /></li>
-<li><a id="orgbc817ff"></a>Perspective projections<br /></li>
-<li><a id="org2cd7a3d"></a>Composing transformation<br /></li>
-<li><a id="orgf0938b7"></a><b>EXCLUDING</b>: programming aspects of graphics<br /></li>
+<li><a id="org949bb26"></a>Linear dynamical systems/linear difference equations<br /></li>
+<li><a id="org9838e56"></a>Probability vectors<br /></li>
+<li><a id="org2a0a42d"></a>Stochastic matrices<br /></li>
+<li><a id="org98c5c50"></a>Steady-states<br /></li>
+<li><a id="orga7de28a"></a>Convergence to steady states<br /></li>
 </ul>
 </div>
-<div id="outline-container-orgb8be248" class="outline-2">
-<h2 id="orgb8be248">Subspaces</h2>
-<div class="outline-text-2" id="text-orgb8be248">
+<div id="outline-container-org9caaf71" class="outline-2">
+<h2 id="org9caaf71">Matrix factorization</h2>
+<div class="outline-text-2" id="text-org9caaf71">
 </div>
 <ul class="org-ul">
-<li><a id="org16d6f56"></a>Equivalence with spans<br /></li>
-<li><a id="org0ce917c"></a>Column space<br /></li>
-<li><a id="org31b0ce7"></a>Null space<br /></li>
-<li><a id="org08f5699"></a>Basis<br />
+<li><a id="orgba39fd1"></a>LU factorization<br /></li>
+<li><a id="org471319c"></a>Elementary matrices<br /></li>
+<li><a id="orgb1093ff"></a><b>EXCLUDING</b>:<br />
 <ul class="org-ul">
-<li><a id="org7da26d6"></a>of column space<br /></li>
-<li><a id="org72013b0"></a>of null space<br /></li>
-</ul>
-</li>
-</ul>
-</div>
-<div id="outline-container-org12d5a19" class="outline-2">
-<h2 id="org12d5a19">Dimension and rank</h2>
-<div class="outline-text-2" id="text-org12d5a19">
-</div>
-<ul class="org-ul">
-<li><a id="orgded12b3"></a>Coordinate systems<br /></li>
-<li><a id="orgb2e6578"></a>Dimension of a subspace<br />
-<ul class="org-ul">
-<li><a id="orgc4b352e"></a>of column space<br /></li>
-<li><a id="org0ce63d5"></a>of null space<br /></li>
-</ul>
-</li>
-<li><a id="org31eb9b8"></a>Rank<br /></li>
-<li><a id="orgcc7689a"></a>Rank-nullity theorem<br /></li>
-<li><a id="orgb50f7a7"></a><b>EXCLUDING</b>: Isomorphism<br /></li>
-</ul>
-</div>
-<div id="outline-container-org8fecd6d" class="outline-2">
-<h2 id="org8fecd6d">Eigenvectors and eigenvalues</h2>
-<div class="outline-text-2" id="text-org8fecd6d">
-</div>
-<ul class="org-ul">
-<li><a id="orga47a222"></a>Checking eigenvectors/values<br /></li>
-<li><a id="orge0ae43d"></a>Finding eigenvectors<br /></li>
-<li><a id="org422156f"></a>Eigenspace<br /></li>
-<li><a id="org710969c"></a>Eigenvalues of triangular matrices<br /></li>
-<li><a id="org63ff6e3"></a>Invertibility and eigenvalues<br /></li>
-<li><a id="orgc55e27d"></a>Eigenvalues solve difference equations<br /></li>
-</ul>
-</div>
-<div id="outline-container-org24574fe" class="outline-2">
-<h2 id="org24574fe">The characteristic equation</h2>
-<div class="outline-text-2" id="text-org24574fe">
-</div>
-<ul class="org-ul">
-<li><a id="org73a6ffe"></a>Determinants<br /></li>
-<li><a id="orgec641be"></a>Finding the characteristic polynomial<br /></li>
-<li><a id="org2c0240b"></a>Finding eigenvalues<br /></li>
-<li><a id="org0a1a37a"></a>Similarity<br /></li>
-<li><a id="org1f28619"></a>Complete solution for a Markov chain<br /></li>
-</ul>
-</div>
-<div id="outline-container-orgf778537" class="outline-2">
-<h2 id="orgf778537">Diagonalizability</h2>
-<div class="outline-text-2" id="text-orgf778537">
-</div>
-<ul class="org-ul">
-<li><a id="org0ea1ca6"></a>Diagonal matrices<br /></li>
-<li><a id="orga00c39d"></a>Similar Matrices<br /></li>
-<li><a id="org46d5723"></a>Diagonalizability<br /></li>
-<li><a id="org3e30962"></a>Eigenbasis<br /></li>
-<li><a id="org5551713"></a>Exposing the behavior of dynamical systems<br /></li>
-</ul>
-</div>
-<div id="outline-container-org3434fec" class="outline-2">
-<h2 id="org3434fec">PageRank</h2>
-<div class="outline-text-2" id="text-org3434fec">
-</div>
-<ul class="org-ul">
-<li><a id="org88b1826"></a>Random walks<br /></li>
-<li><a id="orgea9a703"></a><b>EXCLUDING</b>:<br />
-<ul class="org-ul">
-<li><a id="org2be056b"></a>The history<br /></li>
-<li><a id="org796253e"></a>Reflecting vs. absorbing boundaries<br /></li>
-<li><a id="org7aa7344"></a>The power method<br /></li>
+<li><a id="org46925b6"></a>Forward substitution<br /></li>
+<li><a id="org77024f1"></a>FLOP counts<br /></li>
+<li><a id="org0d2ff93"></a>Pivoting<br /></li>
 </ul>
 </li>
 </ul>
 </div>
-<div id="outline-container-orga9755dc" class="outline-2">
-<h2 id="orga9755dc">Analytic geometry</h2>
-<div class="outline-text-2" id="text-orga9755dc">
+<div id="outline-container-org86e368c" class="outline-2">
+<h2 id="org86e368c">Computer graphics</h2>
+<div class="outline-text-2" id="text-org86e368c">
 </div>
 <ul class="org-ul">
-<li><a id="org06c53ec"></a>Inner product/dot product<br /></li>
-<li><a id="org0fd41d9"></a>Norm<br /></li>
-<li><a id="org11ea4c0"></a>Distance<br /></li>
-<li><a id="orgc562f48"></a>Angle<br /></li>
-<li><a id="orgd8d7bbb"></a>Orthogonality<br /></li>
-<li><a id="org1455c8d"></a>Cosine similarity<br /></li>
+<li><a id="orgd86a151"></a>Homogeneous coordinates<br /></li>
+<li><a id="org41a8a26"></a>Rotation matrices<br /></li>
+<li><a id="org9ab1548"></a>Perspective projections<br /></li>
+<li><a id="org2c462eb"></a>Composing transformation<br /></li>
+<li><a id="org4e578cc"></a><b>EXCLUDING</b>: programming aspects of graphics<br /></li>
 </ul>
 </div>
-<div id="outline-container-orge51bbfb" class="outline-2">
-<h2 id="orge51bbfb">Orthogonal projection</h2>
-<div class="outline-text-2" id="text-orge51bbfb">
+<div id="outline-container-org6c3bd74" class="outline-2">
+<h2 id="org6c3bd74">Subspaces</h2>
+<div class="outline-text-2" id="text-org6c3bd74">
 </div>
 <ul class="org-ul">
-<li><a id="org9f7b715"></a>Orthogonal basis<br /></li>
-<li><a id="orgae5451d"></a>Orthogonal projection<br /></li>
-<li><a id="org22ac115"></a>Projections and coordinates<br /></li>
-<li><a id="org2b7f47b"></a>Orthonormal sets<br /></li>
-<li><a id="org7b971ed"></a>Orthogonal matrices<br /></li>
+<li><a id="orga04acef"></a>Equivalence with spans<br /></li>
+<li><a id="org374fb33"></a>Column space<br /></li>
+<li><a id="orgaf42f77"></a>Null space<br /></li>
+<li><a id="orgc1326df"></a>Basis<br />
+<ul class="org-ul">
+<li><a id="org61da12c"></a>of column space<br /></li>
+<li><a id="org9860152"></a>of null space<br /></li>
+</ul>
+</li>
 </ul>
 </div>
-<div id="outline-container-org7e7001a" class="outline-2">
-<h2 id="org7e7001a">Least squares</h2>
-<div class="outline-text-2" id="text-org7e7001a">
+<div id="outline-container-org5b8c2dc" class="outline-2">
+<h2 id="org5b8c2dc">Dimension and rank</h2>
+<div class="outline-text-2" id="text-org5b8c2dc">
 </div>
 <ul class="org-ul">
-<li><a id="org1c550fc"></a>Finding least squares<br /></li>
-<li><a id="org1fa96d9"></a>Normal equations<br /></li>
-<li><a id="org5c224af"></a>Projecting onto a basis<br /></li>
+<li><a id="orgb08a0cb"></a>Coordinate systems<br /></li>
+<li><a id="org02b2837"></a>Dimension of a subspace<br />
+<ul class="org-ul">
+<li><a id="org8a29706"></a>of column space<br /></li>
+<li><a id="orga251d3c"></a>of null space<br /></li>
+</ul>
+</li>
+<li><a id="org2612f86"></a>Rank<br /></li>
+<li><a id="org902e423"></a>Rank-nullity theorem<br /></li>
+<li><a id="org6f7b0ff"></a><b>EXCLUDING</b>: Isomorphism<br /></li>
 </ul>
 </div>
-<div id="outline-container-org108fff4" class="outline-2">
-<h2 id="org108fff4">Linear models</h2>
-<div class="outline-text-2" id="text-org108fff4">
+<div id="outline-container-orgc4ae8b8" class="outline-2">
+<h2 id="orgc4ae8b8">Eigenvectors and eigenvalues</h2>
+<div class="outline-text-2" id="text-orgc4ae8b8">
 </div>
 <ul class="org-ul">
-<li><a id="org0efa019"></a>Best fit line/quadratic<br /></li>
-<li><a id="org61b7085"></a>Multiple regression<br /></li>
-<li><a id="orga3a4e24"></a>Design matrices<br /></li>
+<li><a id="orgdc45128"></a>Checking eigenvectors/values<br /></li>
+<li><a id="org795af69"></a>Finding eigenvectors<br /></li>
+<li><a id="org2060cad"></a>Eigenspace<br /></li>
+<li><a id="org8961587"></a>Eigenvalues of triangular matrices<br /></li>
+<li><a id="org50f7580"></a>Invertibility and eigenvalues<br /></li>
+<li><a id="org3cef56a"></a>Eigenvalues solve difference equations<br /></li>
 </ul>
 </div>
-<div id="outline-container-orgdd1c608" class="outline-2">
-<h2 id="orgdd1c608">Symmetric matrices</h2>
-<div class="outline-text-2" id="text-orgdd1c608">
+<div id="outline-container-org3924a0f" class="outline-2">
+<h2 id="org3924a0f">The characteristic equation</h2>
+<div class="outline-text-2" id="text-org3924a0f">
 </div>
 <ul class="org-ul">
-<li><a id="org96eb23c"></a>Orthogonal diagonalization<br /></li>
-<li><a id="orge33cc09"></a>Quadratic forms<br /></li>
-<li><a id="org165c323"></a>Definiteness<br /></li>
-<li><a id="org504b51a"></a>Constrained optimization<br /></li>
+<li><a id="org4f6f3ab"></a>Determinants<br /></li>
+<li><a id="orgcc0537d"></a>Finding the characteristic polynomial<br /></li>
+<li><a id="org6170529"></a>Finding eigenvalues<br /></li>
+<li><a id="orge118db5"></a>Similarity<br /></li>
+<li><a id="orgc904328"></a>Complete solution for a Markov chain<br /></li>
 </ul>
 </div>
-<div id="outline-container-org9969931" class="outline-2">
-<h2 id="org9969931">Singular value decomposition</h2>
-<div class="outline-text-2" id="text-org9969931">
+<div id="outline-container-org30d6a09" class="outline-2">
+<h2 id="org30d6a09">Diagonalizability</h2>
+<div class="outline-text-2" id="text-org30d6a09">
 </div>
 <ul class="org-ul">
-<li><a id="org76541b3"></a>\(\|A\mathbf x\|^2\) as a quadratic form<br /></li>
-<li><a id="orgd29b352"></a>Singular values<br /></li>
-<li><a id="org6c98920"></a>Determining the SVD of a matrix<br /></li>
-<li><a id="org5a0f4ef"></a><b>EXCLUDING</b><br />
+<li><a id="org5f6cec1"></a>Diagonal matrices<br /></li>
+<li><a id="org2afd2ee"></a>Similar Matrices<br /></li>
+<li><a id="org04e44c0"></a>Diagonalizability<br /></li>
+<li><a id="org36d5ba0"></a>Eigenbasis<br /></li>
+<li><a id="orga4d7ba3"></a>Exposing the behavior of dynamical systems<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgd2109bd" class="outline-2">
+<h2 id="orgd2109bd">PageRank</h2>
+<div class="outline-text-2" id="text-orgd2109bd">
+</div>
 <ul class="org-ul">
-<li><a id="org06a91e7"></a>Reduced SVD and the psuedoinverse<br /></li>
-<li><a id="org3210947"></a>Applications of the SVD<br /></li>
+<li><a id="org17c20ce"></a>Random walks<br /></li>
+<li><a id="org595c660"></a><b>EXCLUDING</b>:<br />
+<ul class="org-ul">
+<li><a id="orge275088"></a>The history<br /></li>
+<li><a id="org727e1c2"></a>Reflecting vs. absorbing boundaries<br /></li>
+<li><a id="org697464f"></a>The power method<br /></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgad264ae" class="outline-2">
+<h2 id="orgad264ae">Analytic geometry</h2>
+<div class="outline-text-2" id="text-orgad264ae">
+</div>
+<ul class="org-ul">
+<li><a id="orgc79a32a"></a>Inner product/dot product<br /></li>
+<li><a id="org18ef07e"></a>Norm<br /></li>
+<li><a id="org1231d4c"></a>Distance<br /></li>
+<li><a id="orgc4f78fa"></a>Angle<br /></li>
+<li><a id="org1713f9e"></a>Orthogonality<br /></li>
+<li><a id="orgcf4b892"></a>Cosine similarity<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgcfde3b3" class="outline-2">
+<h2 id="orgcfde3b3">Orthogonal projection</h2>
+<div class="outline-text-2" id="text-orgcfde3b3">
+</div>
+<ul class="org-ul">
+<li><a id="org7382548"></a>Orthogonal basis<br /></li>
+<li><a id="orgc2d48a6"></a>Orthogonal projection<br /></li>
+<li><a id="orgce764e9"></a>Projections and coordinates<br /></li>
+<li><a id="org018efe9"></a>Orthonormal sets<br /></li>
+<li><a id="org099bf6d"></a>Orthogonal matrices<br /></li>
+</ul>
+</div>
+<div id="outline-container-org6a2191c" class="outline-2">
+<h2 id="org6a2191c">Least squares</h2>
+<div class="outline-text-2" id="text-org6a2191c">
+</div>
+<ul class="org-ul">
+<li><a id="orge13afc6"></a>Finding least squares<br /></li>
+<li><a id="org89c0fc3"></a>Normal equations<br /></li>
+<li><a id="org1eaadcf"></a>Projecting onto a basis<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgd5c348f" class="outline-2">
+<h2 id="orgd5c348f">Linear models</h2>
+<div class="outline-text-2" id="text-orgd5c348f">
+</div>
+<ul class="org-ul">
+<li><a id="orgc6d1a16"></a>Best fit line/quadratic<br /></li>
+<li><a id="orgedb8e21"></a>Multiple regression<br /></li>
+<li><a id="org1caeb1c"></a>Design matrices<br /></li>
+</ul>
+</div>
+<div id="outline-container-org43b8af7" class="outline-2">
+<h2 id="org43b8af7">Symmetric matrices</h2>
+<div class="outline-text-2" id="text-org43b8af7">
+</div>
+<ul class="org-ul">
+<li><a id="org9756006"></a>Orthogonal diagonalization<br /></li>
+<li><a id="org495fd76"></a>Quadratic forms<br /></li>
+<li><a id="org615b073"></a>Definiteness<br /></li>
+<li><a id="org1cb80af"></a>Constrained optimization<br /></li>
+</ul>
+</div>
+<div id="outline-container-org92c2633" class="outline-2">
+<h2 id="org92c2633">Singular value decomposition</h2>
+<div class="outline-text-2" id="text-org92c2633">
+</div>
+<ul class="org-ul">
+<li><a id="orged218cf"></a>\(\|A\mathbf x\|^2\) as a quadratic form<br /></li>
+<li><a id="orgb2c3d0d"></a>Singular values<br /></li>
+<li><a id="org6ceff43"></a>Determining the SVD of a matrix<br /></li>
+<li><a id="orgb772699"></a>Reduced SVD and the psuedoinverse<br /></li>
+<li><a id="orgb8e0364"></a><b>EXCLUDING</b><br />
+<ul class="org-ul">
+<li><a id="org63e6a7e"></a>Applications of the SVD<br /></li>
 </ul>
 </li>
 </ul>
